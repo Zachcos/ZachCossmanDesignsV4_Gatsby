@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import { colors } from './variables';
 
 const GlobalStyle = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -46,7 +47,10 @@ const GlobalStyle = createGlobalStyle`
     border-spacing: 0;
   }
   body {
+    background-color: ${colors.darkGrey};
+    font-family: 'Open Sans', sans-serif;
     font-size: 18px;
+    font-weight: 400;
   }
 `;
 
