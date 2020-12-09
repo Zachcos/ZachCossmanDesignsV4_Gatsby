@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import GlobalStyle from '../imports/globalStyle';
 
-export default function Layout() {
+export default function Layout({ children }) {
   return (
     <>
       <Helmet>
@@ -22,6 +22,7 @@ export default function Layout() {
       </Helmet>
       <GlobalStyle />
       <h1>This is the layout component</h1>
+      {children}
     </>
   );
 }
