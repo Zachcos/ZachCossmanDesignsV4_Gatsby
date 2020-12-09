@@ -48,6 +48,7 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     background-color: ${colors.darkGrey};
+    color: ${colors.lightGrey};
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     font-weight: 400;
