@@ -24,12 +24,11 @@ const LogoContainer = styled.div`
 
 const NavbarItems = styled.div`
   display: flex;
-  /* width: 45%; */
-  width: 400px;
-  margin-right: 60px;
-  justify-content: space-between;
   font-family: Oswald, sans-serif;
   font-size: ${font.base};
+  justify-content: space-between;
+  margin-right: 60px;
+  width: 400px;
 `;
 
 export default function Navbar() {
