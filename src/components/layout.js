@@ -2,6 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import GlobalStyle from '../imports/globalStyle';
 
+import Navbar from './navbar';
+
 export default function Layout({ children }) {
   return (
     <>
@@ -21,7 +23,7 @@ export default function Layout({ children }) {
         />
       </Helmet>
       <GlobalStyle />
-      <h1>This is the layout component</h1>
+      <Navbar />
       {children}
     </>
   );
