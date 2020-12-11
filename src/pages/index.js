@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { colors, font } from '../imports/variables';
+import CtaBtn from '../components/ctaBtn';
 
 const HeroContainer = styled.div`
   margin-top: 100px;
@@ -18,6 +19,7 @@ const HeroDisplayText = styled.h1`
 
 const HeroDisplayCopy = styled.p`
   line-height: 2em;
+  margin-bottom: 50px;
 `;
 
 export default function Home() {
@@ -28,9 +30,10 @@ export default function Home() {
       </HeroDisplayText>
       <HeroDisplayCopy>
         For over 10 years I've been designing and developing sites and web
-        experiences for companies and creative individuals. Check out some of my
-        work, learn more about me, and get in touch...
+        experiences for companies and creative individuals. Check out my work,
+        learn more about me, and get in touch...
       </HeroDisplayCopy>
+      <CtaBtn />
     </HeroContainer>
   );
 }
