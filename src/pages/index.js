@@ -20,6 +20,26 @@ const HeroDisplayText = styled.h1`
 const HeroDisplayCopy = styled.p`
   line-height: 2em;
   margin-bottom: 50px;
+  a {
+    text-decoration: none;
+    color: ${colors.lightGrey};
+    position: relative;
+    &:after {
+      background: ${colors.accent};
+      bottom: -8px;
+      content: '';
+      height: 3px;
+      left: 0;
+      opacity: 0.2;
+      position: absolute;
+      transition: all 0.3s ease-out;
+      width: 100%;
+    }
+    &:hover:after {
+      bottom: -4px;
+      opacity: 1;
+    }
+  }
 `;
 
 export default function Home() {
@@ -31,7 +51,11 @@ export default function Home() {
       <HeroDisplayCopy>
         For over 10 years I've been designing and developing sites and web
         experiences for companies and creative individuals. Check out my work,
-        learn more about me, and get in touch...
+        learn more{' '}
+        <a href="#" alt="">
+          about me
+        </a>
+        , and get in touch...
       </HeroDisplayCopy>
       <CtaBtn />
     </HeroContainer>
