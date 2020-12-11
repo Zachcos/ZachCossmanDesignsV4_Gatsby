@@ -1,8 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import styled from 'styled-components';
 import GlobalStyle from '../imports/globalStyle';
 
 import Navbar from './navbar';
+
+const ContentContainer = styled.div`
+  margin: 0 60px;
+`;
 
 export default function Layout({ children }) {
   return (
@@ -24,7 +29,7 @@ export default function Layout({ children }) {
       </Helmet>
       <GlobalStyle />
       <Navbar />
-      {children}
+      <ContentContainer>{children}</ContentContainer>
     </>
   );
 }
