@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { colors, font } from '../imports/variables';
 import FeaturedItem from '../components/featuredItem';
+import Footer from '../components/footer';
 
 const WorkWrapper = styled.div`
   margin: 270px 0 200px 0;
@@ -42,28 +43,31 @@ const TempImage = styled.div`
 
 export default function Work() {
   return (
-    <WorkWrapper>
-      <FeaturedWrapper>
-        <WrapperHeading>Featured Projects</WrapperHeading>
-        <FeaturedItem />
-        <FeaturedItem />
-        <FeaturedItem />
-      </FeaturedWrapper>
-      <OtherWrapper>
-        <WrapperHeading>Other Projects</WrapperHeading>
-        <TempImage />
-        <TempImage />
-        <TempImage />
-        <TempImage />
-        <TempImage />
-        <TempImage />
-        <TempImage />
-        <TempImage />
-        <TempImage />
-        <TempImage />
-        <TempImage />
-        <TempImage />
-      </OtherWrapper>
-    </WorkWrapper>
+    <>
+      <WorkWrapper>
+        <FeaturedWrapper>
+          <WrapperHeading>Featured Projects</WrapperHeading>
+          <FeaturedItem />
+          <FeaturedItem />
+          <FeaturedItem />
+        </FeaturedWrapper>
+        <OtherWrapper>
+          <WrapperHeading>Other Projects</WrapperHeading>
+          <TempImage />
+          <TempImage />
+          <TempImage />
+          <TempImage />
+          <TempImage />
+          <TempImage />
+          <TempImage />
+          <TempImage />
+          <TempImage />
+          <TempImage />
+          <TempImage />
+          <TempImage />
+        </OtherWrapper>
+      </WorkWrapper>
+      <Footer />
+    </>
   );
 }
