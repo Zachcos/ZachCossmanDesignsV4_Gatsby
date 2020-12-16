@@ -1,6 +1,12 @@
 [
   {
     "title": "Zach Cossman Designs v3",
+    "description": [
+      "The v3 redesign of Zach Cossman Designs was originally a static site where I managed all the portfolio items manually. Once I learned GatsbyJS, it was a no-brainer to covert the portfolio information into JSON data and allow the site to create the portfolio links by itself, as well as programatically create the full-page portfolio detail pages.",
+      "Once the site was established, I did my best to integrate working page transitions with the React Spring library, but they unfortunately never functioned 100% properly. Once I discovered Framer Motion for page transitions, I began creating the current site you're on (Zach Cossman Designs v4!) and never saw the benefit of refactoring from React Spring to Framer Motion when the site was going to be taken offline anyways.",
+      "ZCDv3 was also my first production site that utilized the Styled Components library, which is my go-to library for CSS-in-JS."
+    ],
+    "service": "Web",
     "slug": "zachcossmandesignsv3",
     "portImg": "../../images/projects/zachcossmandesigns3/port_img.jpg",
     "assets": [
@@ -10,10 +16,27 @@
   },
   {
     "title": "Brooklyn Custom Shop",
+    "description": [
+      "A fictional guitar site I built to learn about Flexbox, with the mobile menu as a first foray into more involved hover states.",
+      "As with any guitar shop, it's Fenders and Martins only and only one guitar in the entire store isn't crazy expensive."
+    ],
+    "service": "Web",
     "slug": "brooklyncustomshop",
     "portImg":"/images/projects/brooklyncustomshop/port_img.jpg",
     "assets": [
       "../../images/projects/brooklyncustomshop/bcs_1.jpg"
+    ]
+  },
+  {
+    "title": "Test Project",
+    "description": [
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean feugiat nulla in mauris scelerisque, efficitur varius leo condimentum. Ut volutpat nunc sed pellentesque tempor.",
+      "Proin malesuada metus eget nisl pretium, eget venenatis justo pulvinar. Donec semper ex eget mauris ultrices, vel egestas lectus ornare. Praesent sit amet felis non ligula accumsan scelerisque sit amet in nulla. Nunc eleifend justo at massa volutpat, at imperdiet mi accumsan."
+    ],
+    "service": "Web",
+    "slug": "testproject",
+    "portImg":"/images/projects/testproject/port_img.jpg",
+    "assets": [
     ]
   }
 ]

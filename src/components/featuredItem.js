@@ -70,7 +70,7 @@ export default function FeaturedItem({ item }) {
       <div className="details">
         <div className="service">
           <div className="subheading">Service</div>
-          Web
+          {item.service}
         </div>
         <div className="links">
           <a href="#">
