@@ -4,7 +4,8 @@ import { colors, font } from '../imports/variables';
 
 const ItemWrapper = styled.div`
   width: 325px;
-  margin: 0 20px 70px;
+  //! Fix margins! //
+  margin-bottom: 70px;
   .title {
     font-family: 'Oswald', sans-serif;
     font-size: ${font.h4};
