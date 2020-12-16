@@ -1,15 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import { colors, font } from '../imports/variables';
 
 import logo from '../../static/images/zcd_logo2.svg';
 
-const NavbarContainer = styled.div`
+const NavbarContainer = styled(motion.div)`
   align-items: center;
   background: ${colors.darkGrey};
   display: flex;
   height: 120px;
   width: 100%;
+
+  position: fixed;
+  top: 0;
+  left: 0;
 `;
 
 const LogoContainer = styled.div`
@@ -87,9 +92,31 @@ const NavbarItems = styled.div`
 `;
 
 export default function Navbar() {
+  const [shouldShow, setShouldShow] = useState(true);
+  const [lastYPos, setLastYPos] = useState(0);
+
+  useEffect(() => {
+    function handleScroll() {
+      const yPos = window.scrollY;
+      const isScrollingUp = yPos < lastYPos;
+
+      setShouldShow(isScrollingUp);
+      setLastYPos(yPos);
+    }
+
+    window.addEventListener('scroll', handleScroll, false);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll, false);
+    };
+  }, [lastYPos]);
   return (
     <>
-      <NavbarContainer>
+      <NavbarContainer
+        animate={{ top: shouldShow ? 0 : '-120px' }}
+        initial={{ top: 0 }}
+        transition={{ ease: 'easeOut', duration: 0.5 }}
+      >
         <LogoContainer>
           <img src={logo} alt="" />
         </LogoContainer>
