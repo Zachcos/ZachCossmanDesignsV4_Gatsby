@@ -6,6 +6,18 @@ const ItemWrapper = styled.div`
   width: 325px;
   //! Fix margins! //
   margin-bottom: 70px;
+  .image-frame {
+    height: 325px;
+    width: 325px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    position: relative;
+    img {
+      position: relative;
+      right: 50%;
+      height: 100%;
+    }
+  }
   .title {
     font-family: 'Oswald', sans-serif;
     font-size: ${font.h4};
@@ -46,21 +58,15 @@ const ItemWrapper = styled.div`
       }
     }
   }
-  //? Begin temp image placeholder //
-  .temp-image {
-    background: lightcoral;
-    height: 325px;
-    width: 325px;
-    margin-bottom: 15px;
-  }
-  //? End temp image placeholder //
 `;
 
-export default function FeaturedItem() {
+export default function FeaturedItem({ item }) {
   return (
     <ItemWrapper>
-      <div className="temp-image" />
-      <div className="title">Zach Cossman Designs v3</div>
+      <div className="image-frame">
+        <img src={item.portImg} alt="" />
+      </div>
+      <div className="title">{item.title}</div>
       <div className="details">
         <div className="service">
           <div className="subheading">Service</div>
