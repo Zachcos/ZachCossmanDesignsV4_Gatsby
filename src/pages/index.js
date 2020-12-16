@@ -4,7 +4,7 @@ import { colors, font } from '../imports/variables';
 import CtaBtn from '../components/ctaBtn';
 
 const HeroContainer = styled.div`
-  margin-top: 100px;
+  margin-top: 220px;
   width: 695px;
 `;
 

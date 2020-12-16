@@ -6,7 +6,7 @@ import aboutImg from '../../static/images/ZachC181.jpg';
 
 const SectionWrapper = styled.div`
   display: flex;
-  margin: 150px 0 200px 0;
+  margin: 270px 0 200px 0;
   width: 100%;
   img {
     width: 100%;
