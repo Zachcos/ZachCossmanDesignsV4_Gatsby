@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { graphql } from 'gatsby';
 import { colors, font } from '../imports/variables';
 import FeaturedItem from '../components/featuredItem';
 import Footer from '../components/footer';
@@ -41,15 +42,15 @@ const TempImage = styled.div`
   background: lightcoral;
 `;
 
-export default function Work() {
+export default function Work({ data }) {
   return (
     <>
       <WorkWrapper>
         <FeaturedWrapper>
           <WrapperHeading>Featured Projects</WrapperHeading>
-          <FeaturedItem />
-          <FeaturedItem />
-          <FeaturedItem />
+          {data.allFeaturedPortfolioJson.edges.map((item) => (
+            <FeaturedItem key={item.node.id} item={item.node} />
+          ))}
         </FeaturedWrapper>
         <OtherWrapper>
           <WrapperHeading>Other Projects</WrapperHeading>
@@ -71,3 +72,18 @@ export default function Work() {
     </>
   );
 }
+
+export const query = graphql`
+  query {
+    allFeaturedPortfolioJson {
+      edges {
+        node {
+          id
+          title
+          slug
+          portImg
+        }
+      }
+    }
+  }
+`;
