@@ -68,21 +68,29 @@ export default function About() {
           the phone for hours while we completed and them. (We compared our
           results by sending them through AOL Instant Messenger... ✌🏻👴🏻✌🏻) From
           there, I dabbled in (terrible) Flash animations and eventually found
-          my footing tinkering with late-90's web builders like GeoCities, where
-          the restrictions of that platform made me want to learn how to write
-          my own code. My first sites were Photoshop designs cut into pieces and
-          reassembled for the web with code from Adobe Dreamweaver. Just as I
-          was publishing my first site, I got my first dose of just how quickly
-          things change in the world of web design and development and began the
-          never-ending journey of learning the new tools of the trade. Through
-          table layouts, floats, and the rest, I have stayed on a constant hunt
-          for the technologies that make sites faster and more versatile, with a
+          my footing tinkering with late-90's web builders like Yahoo!
+          GeoCities, where the restrictions of that platform made me want to
+          learn how to write my own code.
+          <br />
+          <br />
+          My first sites were Photoshop designs cut into pieces and reassembled
+          for the web with code from Adobe Dreamweaver. Just as I was publishing
+          my first site, I got my first dose of just how quickly things change
+          in the world of web design and development and began the never-ending
+          journey of learning the new tools of the trade. Through table layouts,
+          floats, and the rest, I have stayed on a constant hunt for the
+          technologies that make sites faster and more versatile, with a
           majority of my current work being built on React with GatsbyJS for
-          static-site generation. Since the mid 2000's I have been working on a
-          freelance basis with a variety of clients, helping them establish
-          brand identities and better-reach their audiences. When I'm not behind
-          the computer, you can find me acting on stage or playing music, or
-          looking for the nearest Starbucks. ☕️
+          static-site generation.
+          <br />
+          <br />
+          Since the mid 2000's I have been working on a freelance basis with a
+          variety of clients, helping them establish brand identities and
+          better-reach their audiences.
+          <br />
+          <br />
+          When I'm not behind the computer, you can find me acting on stage or
+          playing music, or looking for the nearest Starbucks. ☕️
         </CopyWrapper>
       </SectionWrapper>
       <SectionWrapper>
