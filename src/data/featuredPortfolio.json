@@ -1,0 +1,19 @@
+[
+  {
+    "title": "Zach Cossman Designs v3",
+    "slug": "zachcossmandesignsv3",
+    "portImg": "../../images/projects/zachcossmandesigns3/port_img.jpg",
+    "assets": [
+      "../../images/projects/zachcossmandesigns3/zcd_1.jpg",
+      "../../images/projects/zachcossmandesigns3/zcd_2.jpg"
+    ]
+  },
+  {
+    "title": "Brooklyn Custom Shop",
+    "slug": "brooklyncustomshop",
+    "portImg":"/images/projects/brooklyncustomshop/port_img.jpg",
+    "assets": [
+      "../../images/projects/brooklyncustomshop/bcs_1.jpg"
+    ]
+  }
+]
