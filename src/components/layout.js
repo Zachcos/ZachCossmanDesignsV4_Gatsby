@@ -1,15 +1,35 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
+import { motion, AnimatePresence } from 'framer-motion';
 import GlobalStyle from '../imports/globalStyle';
 
 import Navbar from './navbar';
 
-const ContentContainer = styled.div`
+const ContentContainer = styled(motion.div)`
   margin: 0 60px;
 `;
 
-export default function Layout({ children }) {
+export default function Layout({ children, location }) {
+  const duration = 0.5;
+  const variants = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+      transition: {
+        duration,
+        delay: duration,
+        when: 'beforeChildren',
+      },
+    },
+    exit: {
+      opacity: 0,
+      transition: { duration },
+    },
+  };
+
   return (
     <>
       <Helmet>
@@ -29,7 +49,17 @@ export default function Layout({ children }) {
       </Helmet>
       <GlobalStyle />
       <Navbar />
-      <ContentContainer>{children}</ContentContainer>
+      <AnimatePresence>
+        <ContentContainer
+          key={location.pathname}
+          variants={variants}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+        >
+          {children}
+        </ContentContainer>
+      </AnimatePresence>
     </>
   );
 }
