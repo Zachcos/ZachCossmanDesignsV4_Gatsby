@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { colors, font } from '../imports/variables';
-
+import Footer from '../components/footer';
 import aboutImg from '../../static/images/ZachC181.jpg';
 
 const SectionWrapper = styled.div`
@@ -24,7 +24,7 @@ const TitleWrapper = styled.div`
 `;
 
 const CopyWrapper = styled.div`
-  font-size: 1rem;
+  font-size: ${font.base};
   line-height: 2rem;
   width: 65%;
   &.process {
@@ -127,6 +127,7 @@ export default function About() {
       <SectionWrapper>
         <img src={aboutImg} alt="" />
       </SectionWrapper>
+      <Footer />
     </>
   );
 }
