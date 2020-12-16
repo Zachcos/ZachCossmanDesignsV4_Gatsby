@@ -133,10 +133,20 @@ export default function Navbar() {
           <a href="#" alt="" className="text-link">
             email me
           </a>
-          <a className="icon-link">
+          <a
+            href="https://behance.net/Zachcos"
+            target="_blank"
+            rel="noreferrer"
+            className="icon-link"
+          >
             <i className="fab fa-lg fa-behance" />
           </a>
-          <a className="icon-link">
+          <a
+            href="https://github.com/Zachcos"
+            target="_blank"
+            rel="noreferrer"
+            className="icon-link"
+          >
             <i className="fab fa-lg fa-github" />
           </a>
         </NavbarItems>
