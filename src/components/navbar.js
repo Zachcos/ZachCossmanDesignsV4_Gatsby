@@ -124,9 +124,9 @@ export default function Navbar() {
           </Link>
         </LogoContainer>
         <NavbarItems>
-          <a href="#" alt="" className="text-link">
+          <Link to="/work" alt="" className="text-link">
             work
-          </a>
+          </Link>
           <Link to="/about" alt="" className="text-link">
             about
           </Link>
