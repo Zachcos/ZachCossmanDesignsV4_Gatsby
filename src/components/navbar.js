@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { Link } from 'gatsby';
 import { colors, font } from '../imports/variables';
 
 import logo from '../../static/images/zcd_logo2.svg';
@@ -118,15 +119,17 @@ export default function Navbar() {
         transition={{ ease: 'easeOut', duration: 0.5 }}
       >
         <LogoContainer>
-          <img src={logo} alt="" />
+          <Link to="/">
+            <img src={logo} alt="" />
+          </Link>
         </LogoContainer>
         <NavbarItems>
           <a href="#" alt="" className="text-link">
             work
           </a>
-          <a href="#" alt="" className="text-link">
+          <Link to="/about" alt="" className="text-link">
             about
-          </a>
+          </Link>
           <a href="#" alt="" className="text-link">
             email me
           </a>
