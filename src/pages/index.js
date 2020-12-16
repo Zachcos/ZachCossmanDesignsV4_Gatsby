@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 import { colors, font } from '../imports/variables';
 import CtaBtn from '../components/ctaBtn';
 
@@ -52,9 +53,9 @@ export default function Home() {
         For over 10 years I've been designing and developing sites and web
         experiences for companies and creative individuals. Check out my work,
         learn more{' '}
-        <a href="#" alt="">
+        <Link to="/about" alt="">
           about me
-        </a>
+        </Link>
         , and get in touch...
       </HeroDisplayCopy>
       <CtaBtn />
