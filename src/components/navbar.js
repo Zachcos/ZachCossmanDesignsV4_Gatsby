@@ -11,11 +11,11 @@ const NavbarContainer = styled(motion.div)`
   background: ${colors.darkGrey};
   display: flex;
   height: 120px;
-  width: 100%;
-
+  left: 0;
   position: fixed;
   top: 0;
-  left: 0;
+  width: 100%;
+  z-index: 1000;
 `;
 
 const LogoContainer = styled.div`
