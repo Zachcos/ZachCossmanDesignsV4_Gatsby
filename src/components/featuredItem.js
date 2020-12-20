@@ -69,7 +69,7 @@ const ItemWrapper = styled.div`
       right: 0;
       text-decoration: none;
       color: ${colors.lightGrey};
-      transition: 0.3s ease-in-out;
+      transition: 0.2s ease-out;
       i {
         width: 100%;
       }
