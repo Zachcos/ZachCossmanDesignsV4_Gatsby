@@ -130,7 +130,11 @@ export default function Navbar() {
           <Link to="/about" alt="" className="text-link">
             about
           </Link>
-          <a href="#" alt="" className="text-link">
+          <a
+            href="mailto: zachcos@gmail.com?subject=Hey Zach!"
+            alt=""
+            className="text-link"
+          >
             email me
           </a>
           <a
