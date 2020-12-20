@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { graphql } from 'gatsby';
+import { Link, graphql } from 'gatsby';
 import { colors, font } from '../imports/variables';
 import Footer from '../components/footer';
 
@@ -27,10 +27,9 @@ const DetailsContainer = styled.div`
       margin-bottom: 40px;
       &-label {
         color: ${colors.lightGrey};
-        font-family: 'Oswald', sans-serif;
         font-size: 0.8rem;
-        font-weight: 200;
-        letter-spacing: 2px;
+        font-weight: 300;
+        letter-spacing: 1px;
         margin-bottom: 10px;
         opacity: 0.7;
         text-transform: uppercase;
@@ -76,37 +75,100 @@ const AssetContainer = styled.div`
   }
 `;
 
+const NextProjectContainer = styled.div`
+  margin-bottom: 120px;
+  padding-bottom: 60px;
+  height: 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-bottom: 1px solid ${colors.lightGrey};
+  .next-details {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    .label {
+      font-size: 0.7rem;
+      font-weight: 300;
+      color: ${colors.lightGrey};
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      opacity: 0.7;
+    }
+    .project-name {
+      font-size: ${font.h5};
+      position: relative;
+      a {
+        padding-right: 50px;
+        text-decoration: none;
+        color: ${colors.lightGrey};
+        &:hover {
+          i {
+            right: 0;
+            color: ${colors.accent};
+          }
+        }
+      }
+      i {
+        position: absolute;
+        right: 10px;
+        color: ${colors.lightGrey};
+        margin-left: 10px;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+`;
+
 export default function PortfolioDetail({ data }) {
-  const item = data.featuredPortfolioJson;
+  const {
+    title,
+    description,
+    service,
+    liveUrl,
+    nextProj,
+    assets,
+  } = data.featuredPortfolioJson;
   return (
     <>
       <DetailsContainer>
         <div className="info">
-          <h2 className="title">{item.title}</h2>
+          <h2 className="title">{title}</h2>
           <div className="field">
             <span className="field-label">service</span>
-            <span className="field-info">{item.service}</span>
+            <span className="field-info">{service}</span>
           </div>
           <div className="field">
             <span className="field-label">liveUrl</span>
             <span className="field-info">
-              <a href={item.liveUrl} target="_blank" rel="noreferrer">
-                {item.liveUrl}
+              <a href={liveUrl} target="_blank" rel="noreferrer">
+                {liveUrl}
               </a>
             </span>
           </div>
         </div>
         <div className="description">
-          {item.description.map((para) => (
+          {description.map((para) => (
             <p>{para}</p>
           ))}
         </div>
       </DetailsContainer>
       <AssetContainer>
-        {item.assets.map((asset) => (
+        {assets.map((asset) => (
           <img src={asset} alt="" />
         ))}
       </AssetContainer>
+      <NextProjectContainer>
+        <div className="next-details">
+          <div className="label">Next Project</div>
+          <div className="project-name">
+            <Link to={nextProj.slug}>
+              {nextProj.title} <i className="fas fa-arrow-right" />
+            </Link>
+          </div>
+        </div>
+      </NextProjectContainer>
       <Footer />
     </>
   );
