@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 import { colors, font } from '../imports/variables';
 
 const ItemWrapper = styled.div`
@@ -91,9 +92,9 @@ export default function FeaturedItem({ item }) {
         </div>
         <div className="links">
           <span>learn more</span>
-          <a href="#">
+          <Link to={item.slug}>
             <i className="fas fa-lg fa-arrow-right" />
-          </a>
+          </Link>
         </div>
       </div>
     </ItemWrapper>

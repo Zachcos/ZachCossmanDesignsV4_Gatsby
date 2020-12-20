@@ -163,7 +163,7 @@ export default function PortfolioDetail({ data }) {
         <div className="next-details">
           <div className="label">Next Project</div>
           <div className="project-name">
-            <Link to={nextProj.slug}>
+            <Link to={`..${nextProj.slug}`}>
               {nextProj.title} <i className="fas fa-arrow-right" />
             </Link>
           </div>

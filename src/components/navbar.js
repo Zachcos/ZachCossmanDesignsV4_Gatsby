@@ -50,7 +50,7 @@ const NavbarItems = styled.div`
       left: 0;
       opacity: 0;
       position: absolute;
-      transition: 0.3s ease-out;
+      transition: 0.2s ease-out;
       width: 100%;
     }
     &.text-link:hover:after {
@@ -58,7 +58,7 @@ const NavbarItems = styled.div`
       opacity: 1;
     }
     &.icon-link {
-      transition: all 0.3s ease-out;
+      transition: all 0.2s ease-out;
       z-index: 1;
     }
     &.icon-link:after {
