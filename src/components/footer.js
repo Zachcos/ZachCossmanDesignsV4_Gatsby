@@ -48,7 +48,7 @@ const FooterNav = styled.div`
       padding: 10px 5px;
       position: relative;
       text-decoration: none;
-      transition: 0.3s ease-in-out;
+      transition: 0.3s ease-out;
       &.text-link:after {
         background: ${colors.accent};
         bottom: -12px;
