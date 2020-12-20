@@ -35,11 +35,21 @@ const WrapperHeading = styled.div`
   text-transform: uppercase;
 `;
 
-const TempImage = styled.div`
-  width: 225px;
-  height: 225px;
+const OtherProjectWrapper = styled.div`
+  height: 275px;
   margin: 25px;
-  background: lightcoral;
+  overflow: hidden;
+  width: 275px;
+  a {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    img {
+      height: 100%;
+    }
+  }
 `;
 
 export default function Work({ data }) {
@@ -48,24 +58,19 @@ export default function Work({ data }) {
       <WorkWrapper>
         <FeaturedWrapper>
           <WrapperHeading>Featured Projects</WrapperHeading>
-          {data.allFeaturedPortfolioJson.edges.map((item) => (
+          {data.featured.edges.map((item) => (
             <FeaturedItem key={item.node.id} item={item.node} />
           ))}
         </FeaturedWrapper>
         <OtherWrapper>
           <WrapperHeading>Other Projects</WrapperHeading>
-          <TempImage />
-          <TempImage />
-          <TempImage />
-          <TempImage />
-          <TempImage />
-          <TempImage />
-          <TempImage />
-          <TempImage />
-          <TempImage />
-          <TempImage />
-          <TempImage />
-          <TempImage />
+          {data.other.edges.map((item) => (
+            <OtherProjectWrapper key={item.node.id}>
+              <a href={item.node.behanceUrl} target="_blank" rel="noreferrer">
+                <img src={item.node.thumbImg} alt="" />
+              </a>
+            </OtherProjectWrapper>
+          ))}
         </OtherWrapper>
       </WorkWrapper>
       <Footer />
@@ -75,7 +80,7 @@ export default function Work({ data }) {
 
 export const query = graphql`
   query {
-    allFeaturedPortfolioJson {
+    featured: allFeaturedPortfolioJson {
       edges {
         node {
           id
@@ -83,6 +88,16 @@ export const query = graphql`
           service
           slug
           portImg
+        }
+      }
+    }
+
+    other: allOtherProjectsJson {
+      edges {
+        node {
+          id
+          thumbImg
+          behanceUrl
         }
       }
     }
