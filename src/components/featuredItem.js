@@ -45,16 +45,33 @@ const ItemWrapper = styled.div`
     }
   }
   .links {
+    position: relative;
+    width: 125px;
+    height: 100%;
     display: flex;
-    width: 70px;
-    justify-content: space-between;
     align-items: center;
+    &:hover {
+      a {
+        right: -10px;
+        color: ${colors.accent};
+      }
+    }
+    span {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
     a {
+      padding: 15px;
+      position: relative;
+      right: 0;
       text-decoration: none;
       color: ${colors.lightGrey};
       transition: 0.3s ease-in-out;
-      &:hover {
-        color: ${colors.accent};
+      i {
+        width: 100%;
       }
     }
   }
@@ -73,11 +90,9 @@ export default function FeaturedItem({ item }) {
           {item.service}
         </div>
         <div className="links">
+          <span>learn more</span>
           <a href="#">
-            <i className="fab fa-lg fa-github" />
-          </a>
-          <a href="#">
-            <i className="fas fa-lg fa-external-link-alt" />
+            <i className="fas fa-lg fa-arrow-right" />
           </a>
         </div>
       </div>
