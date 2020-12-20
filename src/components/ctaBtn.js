@@ -37,7 +37,7 @@ const Cta = styled.div`
 export default function CtaBtn() {
   return (
     <a
-      href="mailto: zachcos@gmaol.com?subject=Hey Zach!"
+      href="mailto: zachcos@gmail.com?subject=Hey Zach!"
       style={{ textDecoration: 'none' }}
     >
       <Cta>zachcos@gmail.com</Cta>
