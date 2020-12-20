@@ -5,7 +5,7 @@ import { colors, font } from '../imports/variables';
 const ItemWrapper = styled.div`
   width: 325px;
   //! Fix margins! //
-  margin-bottom: 70px;
+  margin: 0 20px 70px;
   .image-frame {
     height: 325px;
     width: 325px;
