@@ -85,8 +85,8 @@ export default function About() {
           <br />
           <br />
           Since the mid 2000's I have been working on a freelance basis with a
-          variety of clients, helping them establish brand identities and
-          better-reach their audiences.
+          variety of clients, helping them establish brand identities and better
+          reach their audiences.
           <br />
           <br />
           When I'm not behind the computer, you can find me acting on stage or
