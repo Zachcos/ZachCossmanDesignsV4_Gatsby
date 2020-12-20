@@ -8,7 +8,12 @@
     ],
     "service": "Web",
     "slug": "zachcossmandesignsv3",
+    "liveUrl": "https://www.zachcossmandesigns.com",
     "portImg": "../../images/projects/zachcossmandesigns3/port_img.jpg",
+    "nextProj": {
+      "title": "Brooklyn Custom Shop",
+      "slug": "/brooklyncustomshop"
+    },
     "assets": [
       "../../images/projects/zachcossmandesigns3/zcd_1.jpg",
       "../../images/projects/zachcossmandesigns3/zcd_2.jpg"
@@ -22,7 +27,12 @@
     ],
     "service": "Web",
     "slug": "brooklyncustomshop",
+    "liveUrl": "https://brooklyncustomshop.netlify.app/",
     "portImg":"/images/projects/brooklyncustomshop/port_img.jpg",
+    "nextProj": {
+      "title": "Test Project",
+      "slug": "/testproject"
+    },
     "assets": [
       "../../images/projects/brooklyncustomshop/bcs_1.jpg"
     ]
@@ -34,8 +44,13 @@
       "Proin malesuada metus eget nisl pretium, eget venenatis justo pulvinar. Donec semper ex eget mauris ultrices, vel egestas lectus ornare. Praesent sit amet felis non ligula accumsan scelerisque sit amet in nulla. Nunc eleifend justo at massa volutpat, at imperdiet mi accumsan."
     ],
     "service": "Web",
+    "liveUrl": "https://brooklyncustomshop.netlify.app/",
     "slug": "testproject",
     "portImg":"/images/projects/testproject/port_img.jpg",
+    "nextProj": {
+      "title": "Zach Cossman Designs V3",
+      "slug": "/zachcossmandesignsv3"
+    },
     "assets": [
     ]
   }
