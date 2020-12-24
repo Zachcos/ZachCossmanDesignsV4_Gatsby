@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { Link } from 'gatsby';
-import { colors, font } from '../imports/variables';
+import { colors, font, breakpoints } from '../imports/variables';
 
 import logo from '../../static/images/zcd_logo2.svg';
 
@@ -25,6 +25,9 @@ const LogoContainer = styled.div`
   img {
     height: 100%;
     width: 100%;
+  }
+  @media screen and (max-width: ${breakpoints.phone}) {
+    margin: 0 auto 0 40px;
   }
 `;
 
@@ -90,13 +93,58 @@ const NavbarItems = styled.div`
     justify-content: center;
     width: 40px;
   }
+  @media screen and (max-width: ${breakpoints.phone}) {
+    display: none;
+  }
+`;
+
+const HamburgerMenu = styled.div`
+  width: 25px;
+  height: 32px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 40px;
+  padding: 20px;
+  position: relative;
+  &.open {
+    span:first-child {
+      top: 5px;
+      transform: rotate(-45deg);
+    }
+    span:nth-child(2) {
+      top: -5px;
+      transform: rotate(45deg);
+    }
+  }
+  span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    margin-bottom: 7px;
+    background: white;
+    position: relative;
+    transition: 0.2s ease-out;
+  }
+  @media screen and (max-width: ${breakpoints.phone}) {
+    display: flex;
+  }
 `;
 
 export default function Navbar() {
   const [shouldShow, setShouldShow] = useState(true);
   const [lastYPos, setLastYPos] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    if (window.innerWidth <= 600) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+
     function handleScroll() {
       const yPos = window.scrollY;
       const isScrollingUp = yPos < lastYPos;
@@ -114,7 +162,7 @@ export default function Navbar() {
   return (
     <>
       <NavbarContainer
-        animate={{ top: shouldShow ? 0 : '-120px' }}
+        animate={{ top: shouldShow || isMobile ? 0 : '-120px' }}
         initial={{ top: 0 }}
         transition={{ ease: 'easeOut', duration: 0.5 }}
       >
@@ -123,6 +171,13 @@ export default function Navbar() {
             <img src={logo} alt="" />
           </Link>
         </LogoContainer>
+        <HamburgerMenu
+          onClick={() => setIsOpen(!isOpen)}
+          className={isOpen ? 'open' : ''}
+        >
+          <span />
+          <span />
+        </HamburgerMenu>
         <NavbarItems>
           <Link to="/work" alt="" className="text-link">
             work
