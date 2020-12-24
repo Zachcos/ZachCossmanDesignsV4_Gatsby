@@ -1,19 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
-import { colors, font } from '../imports/variables';
+import { motion } from 'framer-motion';
+import { colors, font, aniVariants } from '../imports/variables';
 import Footer from '../components/footer';
 import aboutImg from '../../static/images/ZachC181.jpg';
 
-const SectionWrapper = styled.div`
+const AboutWrapper = styled(motion.div)`
+  width: 100%;
+  position: relative;
+`;
+
+const SectionWrapper = styled(motion.div)`
   display: flex;
   margin: 270px 0 200px 0;
   width: 100%;
+  position: relative;
   img {
     width: 100%;
   }
 `;
 
-const TitleWrapper = styled.div`
+const TitleWrapper = styled(motion.div)`
   width: 30%;
   margin-right: 110px;
   font-family: 'Oswald';
@@ -21,12 +28,14 @@ const TitleWrapper = styled.div`
   line-height: 1.2em;
   color: ${colors.accent};
   text-transform: uppercase;
+  position: relative; ;
 `;
 
-const CopyWrapper = styled.div`
+const CopyWrapper = styled(motion.div)`
   font-size: ${font.base};
   line-height: 2rem;
   width: 65%;
+  position: relative;
   &.process {
     display: flex;
     flex-wrap: wrap;
@@ -59,10 +68,22 @@ const CopyWrapper = styled.div`
 
 export default function About() {
   return (
-    <>
-      <SectionWrapper>
-        <TitleWrapper>Quick and clean designs for over a decade</TitleWrapper>
-        <CopyWrapper>
+    <AboutWrapper
+      variants={aniVariants.parent}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+    >
+      <SectionWrapper
+        variants={aniVariants.parent}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+      >
+        <TitleWrapper variants={aniVariants.child}>
+          Quick and clean designs for over a decade
+        </TitleWrapper>
+        <CopyWrapper variants={aniVariants.child}>
           I began my interest in design when I was in my early teens. My cousin
           and I used to find Photoshop tutorials that we liked and would sit on
           the phone for hours while we completed and them. (We compared our
@@ -136,6 +157,6 @@ export default function About() {
         <img src={aboutImg} alt="" />
       </SectionWrapper>
       <Footer />
-    </>
+    </AboutWrapper>
   );
 }
