@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { colors } from '../imports/variables';
 
-const Cta = styled.button`
+const Cta = styled.div`
   align-items: center;
   background: ${colors.lightGrey};
   color: ${colors.darkGrey};
