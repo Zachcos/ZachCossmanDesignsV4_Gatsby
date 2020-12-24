@@ -1,18 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link, graphql } from 'gatsby';
-import { colors, font } from '../imports/variables';
+import { motion } from 'framer-motion';
+import { colors, font, aniVariants } from '../imports/variables';
 import Footer from '../components/footer';
 
-const DetailsContainer = styled.div`
+const DetailsContainer = styled(motion.div)`
   display: flex;
   margin: 270px 0 100px 0;
   width: 100%;
+  position: relative;
   .info {
     display: flex;
     flex-direction: column;
     margin-right: 110px;
     width: 40%;
+    position: relative;
     .title {
       color: ${colors.accent};
       font-family: 'Oswald', sans-serif;
@@ -20,11 +23,13 @@ const DetailsContainer = styled.div`
       font-weight: 400;
       margin-bottom: 40px;
       text-transform: uppercase;
+      position: relative;
     }
     .field {
       display: flex;
       flex-direction: column;
       margin-bottom: 40px;
+      position: relative;
       &-label {
         color: ${colors.lightGrey};
         font-size: 0.8rem;
@@ -63,12 +68,14 @@ const DetailsContainer = styled.div`
     p {
       line-height: 2rem;
       margin-bottom: 2.5rem;
+      position: relative;
     }
   }
 `;
 
-const AssetContainer = styled.div`
+const AssetContainer = styled(motion.div)`
   width: 100%;
+  position: relative;
   img {
     margin-bottom: 50px;
     width: 100%;
@@ -132,29 +139,36 @@ export default function PortfolioDetail({ data }) {
   } = data.featuredPortfolioJson;
   return (
     <>
-      <DetailsContainer>
-        <div className="info">
-          <h2 className="title">{title}</h2>
-          <div className="field">
+      <DetailsContainer
+        variants={aniVariants.parent}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+      >
+        <motion.div variants={aniVariants.parent} className="info">
+          <motion.h2 variants={aniVariants.child} className="title">
+            {title}
+          </motion.h2>
+          <motion.div variants={aniVariants.child} className="field">
             <span className="field-label">service</span>
             <span className="field-info">{service}</span>
-          </div>
-          <div className="field">
+          </motion.div>
+          <motion.div variants={aniVariants.child} className="field">
             <span className="field-label">liveUrl</span>
             <span className="field-info">
               <a href={liveUrl} target="_blank" rel="noreferrer">
                 {liveUrl}
               </a>
             </span>
-          </div>
-        </div>
-        <div className="description">
+          </motion.div>
+        </motion.div>
+        <motion.div variants={aniVariants.parent} className="description">
           {description.map((para) => (
-            <p>{para}</p>
+            <motion.p variants={aniVariants.child}>{para}</motion.p>
           ))}
-        </div>
+        </motion.div>
       </DetailsContainer>
-      <AssetContainer>
+      <AssetContainer variants={aniVariants.child}>
         {assets.map((asset) => (
           <img src={asset} alt="" />
         ))}
