@@ -13,6 +13,11 @@ export const font = {
   base: '1rem',
 };
 
+export const breakpoints = {
+  tablet: '835px',
+  phone: '450px',
+};
+
 export const aniVariants = {
   parent: {
     initial: { top: '100px' },
