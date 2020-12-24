@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { colors } from './variables';
+import { colors, breakpoints } from './variables';
 
 const GlobalStyle = createGlobalStyle`
   html, body, div, span, applet, object, iframe,
@@ -46,11 +46,16 @@ const GlobalStyle = createGlobalStyle`
     border-collapse: collapse;
     border-spacing: 0;
   }
+  html {
+    font-size: 18px;
+    @media screen and (max-width: ${breakpoints.tablet}) {
+      font-size: 16px;
+    }
+  }
   body {
     background-color: ${colors.darkGrey};
     color: ${colors.lightGrey};
     font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
     font-weight: 400;
   }
 `;
