@@ -33,6 +33,8 @@ const FooterNav = styled.div`
   .attribution {
     font-size: 0.9rem;
     margin-right: auto;
+    display: flex;
+    align-items: center;
   }
   .linkWrapper {
     display: flex;

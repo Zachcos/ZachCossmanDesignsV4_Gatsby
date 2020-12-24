@@ -2,28 +2,28 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link, graphql } from 'gatsby';
 import { motion } from 'framer-motion';
-import { colors, font, aniVariants } from '../imports/variables';
+import { colors, font, aniVariants, breakpoints } from '../imports/variables';
 import Footer from '../components/footer';
 
 const DetailsContainer = styled(motion.div)`
   display: flex;
   margin: 270px 0 100px 0;
-  width: 100%;
   position: relative;
+  width: 100%;
   .info {
     display: flex;
     flex-direction: column;
     margin-right: 110px;
-    width: 40%;
     position: relative;
+    width: 40%;
     .title {
       color: ${colors.accent};
       font-family: 'Oswald', sans-serif;
       font-size: ${font.h3};
       font-weight: 400;
       margin-bottom: 40px;
-      text-transform: uppercase;
       position: relative;
+      text-transform: uppercase;
     }
     .field {
       display: flex;
@@ -53,7 +53,7 @@ const DetailsContainer = styled(motion.div)`
             left: 0;
             opacity: 0;
             position: absolute;
-            transition: 0.3s ease-out;
+            transition: 0.2s ease-out;
             width: 100%;
           }
           &:hover:after {
@@ -71,11 +71,31 @@ const DetailsContainer = styled(motion.div)`
       position: relative;
     }
   }
+  @media screen and (max-width: ${breakpoints.tablet}) {
+    flex-direction: column;
+    .info {
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-bottom: 75px;
+      width: 100%;
+      .title {
+        font-size: ${font.h2};
+        margin-bottom: 50px;
+        width: 100%;
+      }
+      .field {
+        width: 50%;
+        &:nth-child(2) {
+          width: 30%;
+        }
+      }
+    }
+  }
 `;
 
 const AssetContainer = styled(motion.div)`
-  width: 100%;
   position: relative;
+  width: 100%;
   img {
     margin-bottom: 50px;
     width: 100%;
@@ -83,47 +103,50 @@ const AssetContainer = styled(motion.div)`
 `;
 
 const NextProjectContainer = styled.div`
-  margin-bottom: 120px;
-  padding-bottom: 60px;
-  height: 100px;
-  display: flex;
-  justify-content: flex-end;
   align-items: center;
   border-bottom: 1px solid ${colors.lightGrey};
+  display: flex;
+  height: 100px;
+  justify-content: flex-end;
+  margin-bottom: 120px;
+  padding-bottom: 60px;
   .next-details {
     display: flex;
     flex-direction: column;
     text-align: right;
     .label {
+      color: ${colors.lightGrey};
       font-size: 0.7rem;
       font-weight: 300;
-      color: ${colors.lightGrey};
       letter-spacing: 1px;
-      text-transform: uppercase;
       margin-bottom: 20px;
       opacity: 0.7;
+      text-transform: uppercase;
     }
     .project-name {
       font-size: ${font.h5};
       position: relative;
       a {
+        color: ${colors.lightGrey};
         padding-right: 50px;
         text-decoration: none;
-        color: ${colors.lightGrey};
         &:hover {
           i {
-            right: 0;
             color: ${colors.accent};
+            right: 0;
           }
         }
       }
       i {
-        position: absolute;
-        right: 10px;
         color: ${colors.lightGrey};
         margin-left: 10px;
+        position: absolute;
+        right: 10px;
         transition: all 0.2s ease-out;
       }
+    }
+    @media screen and (max-width: ${breakpoints.tablet}) {
+      width: 50%;
     }
   }
 `;

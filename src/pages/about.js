@@ -1,49 +1,60 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { colors, font, aniVariants } from '../imports/variables';
+import { colors, font, aniVariants, breakpoints } from '../imports/variables';
 import Footer from '../components/footer';
 import aboutImg from '../../static/images/ZachC181.jpg';
 
 const AboutWrapper = styled(motion.div)`
-  width: 100%;
   position: relative;
+  width: 100%;
 `;
 
 const SectionWrapper = styled(motion.div)`
   display: flex;
-  margin: 270px 0 200px 0;
-  width: 100%;
+  margin: 200px 0;
   position: relative;
+  width: 100%;
   img {
     width: 100%;
+  }
+  &:first-child {
+    margin-top: 270px;
+  }
+  @media screen and (max-width: ${breakpoints.tablet}) {
+    flex-direction: column;
   }
 `;
 
 const TitleWrapper = styled(motion.div)`
-  width: 30%;
-  margin-right: 110px;
+  color: ${colors.accent};
   font-family: 'Oswald';
   font-size: ${font.h2};
   line-height: 1.2em;
-  color: ${colors.accent};
+  margin-right: 110px;
+  position: relative;
   text-transform: uppercase;
-  position: relative; ;
+  width: 30%;
+  @media screen and (max-width: ${breakpoints.tablet}) {
+    line-height: 1.5em;
+    margin-bottom: 80px;
+    width: 80%;
+  }
 `;
 
 const CopyWrapper = styled(motion.div)`
   font-size: ${font.base};
   line-height: 2rem;
-  width: 65%;
   position: relative;
+  width: 65%;
   &.process {
     display: flex;
     flex-wrap: wrap;
     .item {
       display: flex;
       flex-direction: column;
-      width: 37%;
       margin-bottom: 50px;
+      width: 37%;
       &.mr {
         margin-right: 100px;
       }
@@ -63,6 +74,9 @@ const CopyWrapper = styled(motion.div)`
     font-weight: 400;
     font-size: 1.2rem;
     line-height: 2.4rem;
+  }
+  @media screen and (max-width: ${breakpoints.tablet}) {
+    width: 100%;
   }
 `;
 

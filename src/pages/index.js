@@ -2,14 +2,19 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { motion } from 'framer-motion';
-import { colors, font, aniVariants } from '../imports/variables';
+import { colors, font, aniVariants, breakpoints } from '../imports/variables';
 import CtaBtn from '../components/ctaBtn';
 
 const HeroContainer = styled(motion.div)`
   margin-top: 220px;
-  width: 695px;
-
   position: relative;
+  width: 695px;
+  @media screen and (max-width: ${breakpoints.tablet}) {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 `;
 
 const HeroDisplayText = styled(motion.h1)`
@@ -18,15 +23,17 @@ const HeroDisplayText = styled(motion.h1)`
   font-size: ${font.h1};
   line-height: 1.2em;
   margin-bottom: 50px;
-  text-transform: uppercase;
-
   position: relative;
+  text-transform: uppercase;
+  @media screen and (max-width: ${breakpoints.tablet}) {
+    margin-bottom: 120px;
+    text-align: center;
+  } ;
 `;
 
 const HeroDisplayCopy = styled(motion.p)`
   line-height: 2em;
   margin-bottom: 50px;
-
   position: relative;
   a {
     text-decoration: none;
@@ -47,6 +54,10 @@ const HeroDisplayCopy = styled(motion.p)`
       bottom: -4px;
       opacity: 1;
     }
+  }
+  @media screen and (max-width: ${breakpoints.tablet}) {
+    margin-bottom: 120px;
+    text-align: center;
   }
 `;
 

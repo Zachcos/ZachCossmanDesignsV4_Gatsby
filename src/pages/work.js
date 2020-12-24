@@ -2,41 +2,41 @@ import React from 'react';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
 import { motion } from 'framer-motion';
-import { colors, font, aniVariants } from '../imports/variables';
+import { colors, font, aniVariants, breakpoints } from '../imports/variables';
 import FeaturedItem from '../components/featuredItem';
 import Footer from '../components/footer';
 
 const WorkWrapper = styled(motion.div)`
   margin: 270px 0 200px 0;
-  width: 100%;
   position: relative;
+  width: 100%;
 `;
 
 const FeaturedWrapper = styled(motion.div)`
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   margin-bottom: 150px;
   position: relative;
+  width: 100%;
 `;
 
 const OtherWrapper = styled.div`
-  width: 100%;
+  align-items: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center;
+  width: 100%;
 `;
 
 const WrapperHeading = styled(motion.div)`
-  width: 100%;
-  font-size: ${font.h2};
-  font-family: 'Oswald', sans-serif;
   color: ${colors.accent};
+  font-family: 'Oswald', sans-serif;
+  font-size: ${font.h2};
   margin-bottom: 100px;
-  text-transform: uppercase;
   position: relative;
+  text-transform: uppercase;
+  width: 100%;
 `;
 
 const OtherProjectWrapper = styled.div`
@@ -47,12 +47,17 @@ const OtherProjectWrapper = styled.div`
   a {
     align-items: center;
     display: flex;
+    height: 100%;
     justify-content: center;
     width: 100%;
-    height: 100%;
     img {
       height: 100%;
     }
+  }
+  @media screen and (max-width: ${breakpoints.tablet}) {
+    height: 200px;
+    margin: 15px;
+    width: 200px;
   }
 `;
 
