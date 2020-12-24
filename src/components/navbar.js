@@ -72,7 +72,7 @@ const NavbarItems = styled.div`
       opacity: 1;
       background: ${colors.accent};
       border-radius: 50%;
-      transition: all 0.3s ease-out;
+      transition: all 0.2s ease-out;
       z-index: -1;
     }
     &.icon-link:hover {

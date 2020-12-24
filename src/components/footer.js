@@ -51,25 +51,25 @@ const FooterNav = styled.div`
       transition: 0.3s ease-out;
       &.text-link:after {
         background: ${colors.accent};
-        bottom: -12px;
+        bottom: -10px;
         content: '';
         height: 3px;
         left: 0;
         opacity: 0;
         position: absolute;
-        transition: 0.3s ease-in-out;
+        transition: 0.2s ease-out;
         width: 100%;
       }
       &.text-link:hover:after {
-        bottom: -5px;
+        bottom: -3px;
         opacity: 1;
       }
       &.arrow {
         bottom: 0;
         padding: 10px 5px;
-        transition: 0.3s ease-in-out;
+        transition: 0.2s ease-out;
         i {
-          transition: 0.3s ease-in-out;
+          transition: 0.2s ease-out;
         }
         &:hover {
           bottom: 15px;
