@@ -44,7 +44,7 @@ export const aniVariants = {
       opacity: 1,
       top: 0,
       transition: {
-        duration: 1.1,
+        duration: 0.9,
         ease: 'easeOut',
       },
     },
