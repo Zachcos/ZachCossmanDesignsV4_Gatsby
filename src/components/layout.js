@@ -49,7 +49,7 @@ export default function Layout({ children, location }) {
       </Helmet>
       <GlobalStyle />
       <Navbar />
-      <AnimatePresence>
+      <AnimatePresence exitBeforeEnter>
         <ContentContainer
           key={location.pathname}
           variants={variants}

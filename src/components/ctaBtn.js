@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import { colors } from '../imports/variables';
 
-const Cta = styled.div`
+const Cta = styled.button`
   align-items: center;
   background: ${colors.lightGrey};
   color: ${colors.darkGrey};
@@ -34,13 +35,14 @@ const Cta = styled.div`
   }
 `;
 
-export default function CtaBtn() {
+export default function CtaBtn({ variants }) {
   return (
-    <a
+    <motion.a
+      variants={variants}
       href="mailto: zachcos@gmail.com?subject=Hey Zach!"
-      style={{ textDecoration: 'none' }}
+      style={{ position: 'relative', textDecoration: 'none' }}
     >
       <Cta>zachcos@gmail.com</Cta>
-    </a>
+    </motion.a>
   );
 }
