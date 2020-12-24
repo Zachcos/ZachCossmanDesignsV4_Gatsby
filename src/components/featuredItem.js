@@ -23,7 +23,7 @@ const ItemWrapper = styled(motion.div)`
   .title {
     color: ${colors.accent};
     font-family: 'Oswald', sans-serif;
-    font-size: ${font.h4};
+    font-size: ${font.h5};
     margin-bottom: 20px;
     text-transform: uppercase;
   }
@@ -33,11 +33,11 @@ const ItemWrapper = styled(motion.div)`
     height: 60px;
     justify-content: space-between;
     .service {
-      font-size: ${font.h5};
+      font-size: ${font.base};
       font-weight: 300;
       .subheading {
         font-family: 'Oswald', sans-serif;
-        font-size: 0.85rem;
+        font-size: 0.7rem;
         font-weight: 300;
         letter-spacing: 3px;
         margin-bottom: 10px;
@@ -51,7 +51,7 @@ const ItemWrapper = styled(motion.div)`
     display: flex;
     height: 100%;
     position: relative;
-    width: 125px;
+    width: 140px;
     &:hover {
       a {
         i {
@@ -65,8 +65,9 @@ const ItemWrapper = styled(motion.div)`
       font-size: 0.8rem;
       font-weight: 400;
       letter-spacing: 1px;
+      margin-right: 10px;
       text-transform: uppercase;
-      width: 150px;
+      width: 170px;
     }
     a {
       align-items: center;
