@@ -122,7 +122,7 @@ const NextProjectContainer = styled.div`
         right: 10px;
         color: ${colors.lightGrey};
         margin-left: 10px;
-        transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-out;
       }
     }
   }
