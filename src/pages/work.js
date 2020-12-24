@@ -1,21 +1,24 @@
 import React from 'react';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
-import { colors, font } from '../imports/variables';
+import { motion } from 'framer-motion';
+import { colors, font, aniVariants } from '../imports/variables';
 import FeaturedItem from '../components/featuredItem';
 import Footer from '../components/footer';
 
-const WorkWrapper = styled.div`
+const WorkWrapper = styled(motion.div)`
   margin: 270px 0 200px 0;
   width: 100%;
+  position: relative;
 `;
 
-const FeaturedWrapper = styled.div`
+const FeaturedWrapper = styled(motion.div)`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   margin-bottom: 150px;
+  position: relative;
 `;
 
 const OtherWrapper = styled.div`
@@ -26,13 +29,14 @@ const OtherWrapper = styled.div`
   align-items: center;
 `;
 
-const WrapperHeading = styled.div`
+const WrapperHeading = styled(motion.div)`
   width: 100%;
   font-size: ${font.h2};
   font-family: 'Oswald', sans-serif;
   color: ${colors.accent};
   margin-bottom: 100px;
   text-transform: uppercase;
+  position: relative;
 `;
 
 const OtherProjectWrapper = styled.div`
@@ -55,11 +59,22 @@ const OtherProjectWrapper = styled.div`
 export default function Work({ data }) {
   return (
     <>
-      <WorkWrapper>
-        <FeaturedWrapper>
-          <WrapperHeading>Featured Projects</WrapperHeading>
+      <WorkWrapper
+        variants={aniVariants.parent}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+      >
+        <FeaturedWrapper variants={aniVariants.parent}>
+          <WrapperHeading variants={aniVariants.child}>
+            Featured Projects
+          </WrapperHeading>
           {data.featured.edges.map((item) => (
-            <FeaturedItem key={item.node.id} item={item.node} />
+            <FeaturedItem
+              key={item.node.id}
+              item={item.node}
+              variants={aniVariants.child}
+            />
           ))}
         </FeaturedWrapper>
         <OtherWrapper>

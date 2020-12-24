@@ -1,12 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+import { motion } from 'framer-motion';
 import { colors, font } from '../imports/variables';
 
-const ItemWrapper = styled.div`
+const ItemWrapper = styled(motion.div)`
   width: 325px;
   //! Fix margins! //
   margin: 0 20px 70px;
+  position: relative;
   .image-frame {
     height: 325px;
     width: 325px;
@@ -78,9 +80,9 @@ const ItemWrapper = styled.div`
   }
 `;
 
-export default function FeaturedItem({ item }) {
+export default function FeaturedItem({ item, variants }) {
   return (
-    <ItemWrapper>
+    <ItemWrapper variants={variants}>
       <div className="image-frame">
         <img src={item.portImg} alt="" />
       </div>

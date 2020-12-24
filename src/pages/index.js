@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { motion } from 'framer-motion';
-import { colors, font } from '../imports/variables';
+import { colors, font, aniVariants } from '../imports/variables';
 import CtaBtn from '../components/ctaBtn';
 
 const HeroContainer = styled(motion.div)`
@@ -51,54 +51,17 @@ const HeroDisplayCopy = styled(motion.p)`
 `;
 
 export default function Home() {
-  const parent = {
-    initial: { top: '100px' },
-    animate: {
-      top: 0,
-      transition: {
-        duration: 1.2,
-        delayChildren: 0.3,
-        staggerChildren: 0.25,
-        ease: 'easeOut',
-      },
-    },
-    exit: {
-      top: '-50px',
-      opacity: 0,
-      transition: {
-        duration: 0.8,
-        ease: 'easeIn',
-      },
-    },
-  };
-
-  const child = {
-    initial: {
-      opacity: 0,
-      top: '40px',
-    },
-    animate: {
-      opacity: 1,
-      top: 0,
-      transition: {
-        duration: 1.1,
-        ease: 'easeOut',
-      },
-    },
-    exit: {},
-  };
-
   return (
     <HeroContainer
-      variants={parent}
+      variants={aniVariants.parent}
       initial="initial"
       animate="animate"
       exit="exit"
     >
-      <HeroDisplayText variants={child}>
+      <HeroDisplayText variants={aniVariants.child}>
         Hi, I'm Zach — I design and develop websites
       </HeroDisplayText>
-      <HeroDisplayCopy variants={child}>
+      <HeroDisplayCopy variants={aniVariants.child}>
         For over 10 years I've been designing and developing sites and web
         experiences for companies and creative individuals. Check out my work,
         learn more{' '}
@@ -107,7 +70,7 @@ export default function Home() {
         </Link>
         , and get in touch...
       </HeroDisplayCopy>
-      <CtaBtn variants={child} />
+      <CtaBtn variants={aniVariants.child} />
     </HeroContainer>
   );
 }
