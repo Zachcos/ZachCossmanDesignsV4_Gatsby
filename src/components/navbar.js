@@ -94,7 +94,22 @@ const NavbarItems = styled.div`
     width: 40px;
   }
   @media screen and (max-width: ${breakpoints.phone}) {
-    display: none;
+    background: ${colors.darkGrey};
+    display: flex;
+    flex-direction: column;
+    font-size: ${font.h5};
+    height: 100vh;
+    justify-content: space-around;
+    margin-right: 0;
+    position: fixed;
+    right: -100%;
+    top: 0;
+    transition: 0.6s ease-out;
+    width: 100%;
+    z-index: 1;
+    &.open {
+      right: 0;
+    }
   }
 `;
 
@@ -108,6 +123,7 @@ const HamburgerMenu = styled.div`
   margin-right: 40px;
   padding: 20px;
   position: relative;
+  z-index: 100;
   &.open {
     span:first-child {
       top: 5px;
@@ -178,11 +194,21 @@ export default function Navbar() {
           <span />
           <span />
         </HamburgerMenu>
-        <NavbarItems>
-          <Link to="/work" alt="" className="text-link">
+        <NavbarItems className={isOpen ? 'open' : ''}>
+          <Link
+            to="/work"
+            alt=""
+            className="text-link"
+            onClick={() => setIsOpen(false)}
+          >
             work
           </Link>
-          <Link to="/about" alt="" className="text-link">
+          <Link
+            to="/about"
+            alt=""
+            className="text-link"
+            onClick={() => setIsOpen(false)}
+          >
             about
           </Link>
           <a
