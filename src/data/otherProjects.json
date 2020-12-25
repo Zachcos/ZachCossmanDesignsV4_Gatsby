@@ -1,19 +1,31 @@
 [
   {
-    "thumbImg": "../../images/other/behance_broadwaycharitysongs.jpg",
-    "behanceUrl": "https://www.behance.net/gallery/108862035/Broadway-Charity-Songs-site-design"
+    "thumbImg": "../../images/other/behance_brandonkellycreative.jpg",
+    "behanceUrl": "https://www.behance.net/gallery/110162489/Brandon-Kelly-Creative-site-design"
   },
   {
     "thumbImg": "../../images/other/behance_brooklyncustomshop.jpg",
     "behanceUrl": "https://www.behance.net/gallery/108861901/Brooklyn-Custom-Shop-site-design"
   },
   {
-    "thumbImg": "../../images/other/behance_sheetswap.jpg",
-    "behanceUrl": "https://www.behance.net/gallery/108862085/SheetSwap-site-design"
-  },
-  {
     "thumbImg": "../../images/other/behance_townsleygay.jpg",
     "behanceUrl": "https://www.behance.net/gallery/108862177/Townsley-Gay-custom-WP-Template"
+  },
+  {
+    "thumbImg": "../../images/other/behance_zachcossmandesignsv3.jpg",
+    "behanceUrl": "https://www.behance.net/gallery/108861963/ZachCossmanDesigns-v3"
+  },
+  {
+    "thumbImg": "../../images/other/behance_ddmproductions.jpg",
+    "behanceUrl": "https://www.behance.net/gallery/110162853/DDM-Productions-site-design"
+  },
+  {
+    "thumbImg": "../../images/other/behance_broadwaycharitysongs.jpg",
+    "behanceUrl": "https://www.behance.net/gallery/108862035/Broadway-Charity-Songs-site-design"
+  },
+  {
+    "thumbImg": "../../images/other/behance_sheetswap.jpg",
+    "behanceUrl": "https://www.behance.net/gallery/108862085/SheetSwap-site-design"
   },
   {
     "thumbImg": "../../images/other/behance_tunehound.jpg",
@@ -22,9 +34,5 @@
   {
     "thumbImg": "../../images/other/behance_woodelfcollective.jpg",
     "behanceUrl": "https://www.behance.net/gallery/108861681/Woodelf-Collective-Branding"
-  },
-  {
-    "thumbImg": "../../images/other/behance_zachcossmandesignsv3.jpg",
-    "behanceUrl": "https://www.behance.net/gallery/108861963/ZachCossmanDesigns-v3"
   }
 ]

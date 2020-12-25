@@ -15,6 +15,9 @@ const HeroContainer = styled(motion.div)`
     flex-direction: column;
     width: 100%;
   }
+  @media screen and (max-width: ${breakpoints.phone}) {
+    margin-top: 150px;
+  }
 `;
 
 const HeroDisplayText = styled(motion.h1)`
@@ -28,7 +31,11 @@ const HeroDisplayText = styled(motion.h1)`
   @media screen and (max-width: ${breakpoints.tablet}) {
     margin-bottom: 120px;
     text-align: center;
-  } ;
+  }
+  @media screen and (max-width: ${breakpoints.phone}) {
+    font-size: ${font.h3};
+    margin-bottom: 60px;
+  }
 `;
 
 const HeroDisplayCopy = styled(motion.p)`
@@ -58,6 +65,9 @@ const HeroDisplayCopy = styled(motion.p)`
   @media screen and (max-width: ${breakpoints.tablet}) {
     margin-bottom: 120px;
     text-align: center;
+  }
+  @media screen and (max-width: ${breakpoints.phone}) {
+    margin-bottom: 60px;
   }
 `;
 

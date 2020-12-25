@@ -15,7 +15,6 @@ const DetailsContainer = styled(motion.div)`
     flex-direction: column;
     margin-right: 110px;
     position: relative;
-    width: 40%;
     .title {
       color: ${colors.accent};
       font-family: 'Oswald', sans-serif;
@@ -71,10 +70,10 @@ const DetailsContainer = styled(motion.div)`
       position: relative;
     }
   }
-  @media screen and (max-width: ${breakpoints.tablet}) {
+  @media screen and (max-width: 1000px) {
     flex-direction: column;
     .info {
-      flex-direction: row;
+      flex-direction: column;
       flex-wrap: wrap;
       margin-bottom: 75px;
       width: 100%;
@@ -83,10 +82,22 @@ const DetailsContainer = styled(motion.div)`
         margin-bottom: 50px;
         width: 100%;
       }
+    }
+  }
+  @media screen and (max-width: ${breakpoints.phone}) {
+    margin: 160px 0 100px 0;
+    .info {
+      margin-bottom: 50px;
+      .title {
+        font-size: ${font.h4};
+      }
       .field {
-        width: 50%;
-        &:nth-child(2) {
-          width: 30%;
+        width: 100%;
+        &-label {
+          font-size: 0.7rem;
+        }
+        &-info {
+          font-size: ${font.base};
         }
       }
     }
@@ -148,6 +159,9 @@ const NextProjectContainer = styled.div`
     @media screen and (max-width: ${breakpoints.tablet}) {
       width: 50%;
     }
+    @media screen and (max-width: ${breakpoints.phone}) {
+      width: 100%;
+    }
   }
 `;
 
@@ -155,7 +169,6 @@ export default function PortfolioDetail({ data }) {
   const {
     title,
     description,
-    service,
     liveUrl,
     nextProj,
     assets,
@@ -172,10 +185,6 @@ export default function PortfolioDetail({ data }) {
           <motion.h2 variants={aniVariants.child} className="title">
             {title}
           </motion.h2>
-          <motion.div variants={aniVariants.child} className="field">
-            <span className="field-label">service</span>
-            <span className="field-info">{service}</span>
-          </motion.div>
           <motion.div variants={aniVariants.child} className="field">
             <span className="field-label">liveUrl</span>
             <span className="field-info">
@@ -217,7 +226,6 @@ export const query = graphql`
       slug
       title
       description
-      service
       liveUrl
       nextProj {
         title

@@ -1,6 +1,8 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
 import styled from 'styled-components';
-import { colors, font } from '../imports/variables';
+import { colors, font, breakpoints } from '../imports/variables';
 import CtaBtn from './ctaBtn';
 
 const FooterWrapper = styled.div`
@@ -20,6 +22,20 @@ const FooterWrapper = styled.div`
     .copy {
       font-size: ${font.base};
       margin-bottom: 50px;
+    }
+  }
+  @media screen and (max-width: ${breakpoints.phone}) {
+    .cta {
+      align-items: center;
+      .title {
+        font-size: 2.2rem;
+        margin-bottom: 35px;
+        text-align: center;
+      }
+      .copy {
+        line-height: 1.6em;
+        text-align: center;
+      }
     }
   }
 `;
@@ -42,6 +58,9 @@ const FooterNav = styled.div`
     width: 400px;
     i {
       margin-right: 15px;
+      &:last-child {
+        margin-right: 0;
+      }
     }
     a {
       color: ${colors.lightGrey};
@@ -80,6 +99,19 @@ const FooterNav = styled.div`
           }
         }
       }
+    }
+  }
+  @media screen and (max-width: ${breakpoints.phone}) {
+    flex-direction: column-reverse;
+    margin-bottom: 20px;
+    .attribution {
+      display: block;
+      margin: 20px 0 0 0;
+      text-align: center;
+      width: 100%;
+    }
+    .linkWrapper {
+      width: 100%;
     }
   }
 `;

@@ -10,6 +10,9 @@ const WorkWrapper = styled(motion.div)`
   margin: 270px 0 200px 0;
   position: relative;
   width: 100%;
+  @media screen and (max-width: ${breakpoints.phone}) {
+    margin: 170px 0 100px 0;
+  }
 `;
 
 const FeaturedWrapper = styled(motion.div)`
@@ -19,6 +22,9 @@ const FeaturedWrapper = styled(motion.div)`
   margin-bottom: 150px;
   position: relative;
   width: 100%;
+  @media screen and (max-width: ${breakpoints.phone}) {
+    margin-bottom: 100px;
+  }
 `;
 
 const OtherWrapper = styled.div`
@@ -37,6 +43,10 @@ const WrapperHeading = styled(motion.div)`
   position: relative;
   text-transform: uppercase;
   width: 100%;
+  @media screen and (max-width: ${breakpoints.phone}) {
+    font-size: ${font.h3};
+    text-align: center;
+  }
 `;
 
 const OtherProjectWrapper = styled.div`
@@ -52,12 +62,23 @@ const OtherProjectWrapper = styled.div`
     width: 100%;
     img {
       height: 100%;
+      transition: 0.25s ease-out;
+    }
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
     }
   }
   @media screen and (max-width: ${breakpoints.tablet}) {
     height: 200px;
     margin: 15px;
     width: 200px;
+  }
+  @media screen and (max-width: ${breakpoints.phone}) {
+    height: 130px;
+    width: 130px;
+    margin: 15px 0;
   }
 `;
 
@@ -105,7 +126,6 @@ export const query = graphql`
         node {
           id
           title
-          service
           slug
           portImg
         }

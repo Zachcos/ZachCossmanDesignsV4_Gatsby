@@ -6,7 +6,6 @@
       "Once the site was established, I did my best to integrate working page transitions with the React Spring library, but they unfortunately never functioned 100% properly. Once I discovered Framer Motion for page transitions, I began creating the current site you're on (Zach Cossman Designs v4!) and never saw the benefit of refactoring from React Spring to Framer Motion when the site was going to be taken offline anyways.",
       "ZCDv3 was also my first production site that utilized the Styled Components library, which is my go-to library for CSS-in-JS."
     ],
-    "service": "Web",
     "slug": "zachcossmandesignsv3",
     "liveUrl": "https://www.zachcossmandesigns.com",
     "portImg": "../../images/projects/zachcossmandesigns3/port_img.jpg",
@@ -15,8 +14,8 @@
       "slug": "/brooklyncustomshop"
     },
     "assets": [
-      "../../images/projects/zachcossmandesigns3/zcd_1.jpg",
-      "../../images/projects/zachcossmandesigns3/zcd_2.jpg"
+      "../../images/projects/zachcossmandesigns3/img_1.jpg",
+      "../../images/projects/zachcossmandesigns3/img_2.jpg"
     ]
   },
   {
@@ -25,33 +24,34 @@
       "A fictional guitar site I built to learn about Flexbox, with the mobile menu as a first foray into more involved hover states.",
       "As with any guitar shop, it's Fenders and Martins only and only one guitar in the entire store isn't crazy expensive."
     ],
-    "service": "Web",
     "slug": "brooklyncustomshop",
     "liveUrl": "https://brooklyncustomshop.netlify.app/",
     "portImg":"/images/projects/brooklyncustomshop/port_img.jpg",
     "nextProj": {
-      "title": "Test Project",
-      "slug": "/testproject"
+      "title": "Do-Right Consultants",
+      "slug": "/dorightconsultants"
     },
     "assets": [
-      "../../images/projects/brooklyncustomshop/bcs_1.jpg"
+      "../../images/projects/brooklyncustomshop/img_1.jpg",
+      "../../images/projects/brooklyncustomshop/img_2.jpg"
     ]
   },
   {
-    "title": "Test Project",
+    "title": "Do-Right Consultants",
     "description": [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean feugiat nulla in mauris scelerisque, efficitur varius leo condimentum. Ut volutpat nunc sed pellentesque tempor.",
-      "Proin malesuada metus eget nisl pretium, eget venenatis justo pulvinar. Donec semper ex eget mauris ultrices, vel egestas lectus ornare. Praesent sit amet felis non ligula accumsan scelerisque sit amet in nulla. Nunc eleifend justo at massa volutpat, at imperdiet mi accumsan."
+      "A site for a consulting company based out of New Hope, PA and New York City.",
+      "A snappy, responsive, static site built with only HTML/CSS"
     ],
-    "service": "Web",
-    "liveUrl": "https://brooklyncustomshop.netlify.app/",
-    "slug": "testproject",
-    "portImg":"/images/projects/testproject/port_img.jpg",
+    "slug": "dorightconsultants",
+    "liveUrl": "https://dorightconsultants.com/",
+    "portImg":"/images/projects/dorightconsultants/port_img.jpg",
     "nextProj": {
-      "title": "Zach Cossman Designs V3",
+      "title": "Zach Cossman Designs v3",
       "slug": "/zachcossmandesignsv3"
     },
     "assets": [
+      "../../images/projects/dorightconsultants/img_1.jpg",
+      "../../images/projects/dorightconsultants/img_2.jpg"
     ]
   }
 ]

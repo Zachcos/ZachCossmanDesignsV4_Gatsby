@@ -15,7 +15,7 @@ export const font = {
 
 export const breakpoints = {
   tablet: '865px',
-  phone: '600px',
+  phone: '630px',
 };
 
 export const aniVariants = {

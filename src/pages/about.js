@@ -24,6 +24,12 @@ const SectionWrapper = styled(motion.div)`
   @media screen and (max-width: ${breakpoints.tablet}) {
     flex-direction: column;
   }
+  @media screen and (max-width: ${breakpoints.phone}) {
+    margin: 100px 0;
+    &:first-child {
+      margin: 150px 0;
+    }
+  }
 `;
 
 const TitleWrapper = styled(motion.div)`
@@ -40,6 +46,11 @@ const TitleWrapper = styled(motion.div)`
     margin-bottom: 80px;
     width: 80%;
   }
+  @media screen and (max-width: ${breakpoints.phone}) {
+    font-size: ${font.h3};
+    margin-bottom: 60px;
+    width: 100%;
+  }
 `;
 
 const CopyWrapper = styled(motion.div)`
@@ -53,7 +64,7 @@ const CopyWrapper = styled(motion.div)`
     .item {
       display: flex;
       flex-direction: column;
-      margin-bottom: 50px;
+      margin-bottom: 60px;
       width: 37%;
       &.mr {
         margin-right: 100px;
@@ -77,6 +88,19 @@ const CopyWrapper = styled(motion.div)`
   }
   @media screen and (max-width: ${breakpoints.tablet}) {
     width: 100%;
+  }
+  @media screen and (max-width: ${breakpoints.phone}) {
+    &.process {
+      .item {
+        width: 100%;
+        &.mr {
+          margin-right: 0;
+        }
+      }
+    }
+    &.statement {
+      font-size: ${font.base};
+    }
   }
 `;
 

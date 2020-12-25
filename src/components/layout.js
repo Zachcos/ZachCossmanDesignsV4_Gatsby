@@ -3,11 +3,15 @@ import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
 import GlobalStyle from '../imports/globalStyle';
+import { breakpoints } from '../imports/variables';
 
 import Navbar from './navbar';
 
 const ContentContainer = styled(motion.div)`
   margin: 0 60px;
+  @media screen and (max-width: ${breakpoints.phone}) {
+    margin: 0 35px;
+  }
 `;
 
 export default function Layout({ children, location }) {
