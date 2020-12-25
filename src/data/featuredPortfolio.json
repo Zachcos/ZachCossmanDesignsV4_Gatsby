@@ -7,7 +7,7 @@
       "ZCDv3 was also my first production site that utilized the Styled Components library, which is my go-to library for CSS-in-JS."
     ],
     "slug": "zachcossmandesignsv3",
-    "liveUrl": "https://www.zachcossmandesigns.com",
+    "liveUrl": "https://zachcossmandesigns.netlify.app",
     "portImg": "../../images/projects/zachcossmandesigns3/port_img.jpg",
     "nextProj": {
       "title": "Brooklyn Custom Shop",
