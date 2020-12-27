@@ -124,7 +124,7 @@ export default function About() {
         <CopyWrapper variants={aniVariants.child}>
           I began my interest in design when I was in my early teens. My cousin
           and I used to find Photoshop tutorials that we liked and would sit on
-          the phone for hours while we completed and them. (We compared our
+          the phone for hours while we completed them. (We compared our
           results by sending them through AOL Instant Messenger... ✌🏻👴🏻✌🏻) From
           there, I dabbled in (terrible) Flash animations and eventually found
           my footing tinkering with late-90's web builders like Yahoo!
