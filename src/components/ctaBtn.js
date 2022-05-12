@@ -41,6 +41,7 @@ export default function CtaBtn({ variants }) {
       variants={variants}
       href="mailto: zachcos@gmail.com?subject=Hey Zach!"
       style={{ position: 'relative', textDecoration: 'none' }}
+      name="email me"
     >
       <Cta>zachcos@gmail.com</Cta>
     </motion.a>
