@@ -66,10 +66,9 @@ const GlobalStyle = createGlobalStyle`
   }
 
   @font-face {
-    font-family: 'Open Sans';
+    font-family: 'Oswald';
     font-weight: 1 999;
-    font-style: italic;
-    src: url('/fonts/OpenSans-Italic-VariableFont.ttf') format('truetype-variations');
+    src: url('/fonts/Oswald-VariableFont.ttf') format('truetype-variations');
   }
 `;
 
