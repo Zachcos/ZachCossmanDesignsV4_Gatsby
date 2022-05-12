@@ -58,6 +58,19 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
   }
+
+  @font-face {
+    font-family: 'Open Sans';
+    font-weight: 1 999;
+    src: url('/fonts/OpenSans-VariableFont.ttf') format('truetype-variations');
+  }
+
+  @font-face {
+    font-family: 'Open Sans';
+    font-weight: 1 999;
+    font-style: italic;
+    src: url('/fonts/OpenSans-Italic-VariableFont.ttf') format('truetype-variations');
+  }
 `;
 
 export default GlobalStyle;
