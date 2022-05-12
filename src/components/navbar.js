@@ -183,7 +183,7 @@ export default function Navbar() {
         transition={{ ease: 'easeOut', duration: 0.5 }}
       >
         <LogoContainer>
-          <Link to="/">
+          <Link to="/" name="home">
             <img src={logo} alt="" />
           </Link>
         </LogoContainer>
