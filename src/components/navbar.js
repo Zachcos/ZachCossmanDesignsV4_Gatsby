@@ -183,7 +183,7 @@ export default function Navbar() {
         transition={{ ease: 'easeOut', duration: 0.5 }}
       >
         <LogoContainer>
-          <Link to="/" name="home">
+          <Link to="/" aria-label="home">
             <img src={logo} alt="" />
           </Link>
         </LogoContainer>
@@ -223,7 +223,7 @@ export default function Navbar() {
             target="_blank"
             rel="noreferrer"
             className="icon-link"
-            name="behance"
+            aria-label="behance"
           >
             <i className="fab fa-lg fa-behance" />
           </a>
@@ -232,7 +232,7 @@ export default function Navbar() {
             target="_blank"
             rel="noreferrer"
             className="icon-link"
-            name="github"
+            aria-label="github"
           >
             <i className="fab fa-lg fa-github" />
           </a>
