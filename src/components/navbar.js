@@ -223,6 +223,7 @@ export default function Navbar() {
             target="_blank"
             rel="noreferrer"
             className="icon-link"
+            name="behance"
           >
             <i className="fab fa-lg fa-behance" />
           </a>
@@ -231,6 +232,7 @@ export default function Navbar() {
             target="_blank"
             rel="noreferrer"
             className="icon-link"
+            name="github"
           >
             <i className="fab fa-lg fa-github" />
           </a>
