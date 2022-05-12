@@ -41,6 +41,10 @@ export default function Layout({ children, location }) {
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+        <meta
+          name="description"
+          content="Zach Cossman Designs - Custom performant websites"
+        />
         <title>Zach Cossman Designs</title>
         <script
           src="https://kit.fontawesome.com/c3abb1e5c6.js"
