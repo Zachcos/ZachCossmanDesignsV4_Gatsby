@@ -1,3 +1,12 @@
+import path from 'path';
+
+require('ts-node').register({
+  compilerOptions: {
+    module: 'commonjs',
+    target: 'es2017',
+  },
+});
+
 module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -6,7 +15,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-layout',
       options: {
-        component: require.resolve('./src/components/layout.js'),
+        component: path.resolve('./src/components/layout.js'),
       },
     },
     {
