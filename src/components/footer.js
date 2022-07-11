@@ -4,6 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { colors, font, breakpoints } from '../imports/variables';
 import CtaBtn from './ctaBtn';
+import { Behance, Github, Arrow } from './icons';
 
 const FooterWrapper = styled.div`
   height: 450px;
@@ -56,7 +57,9 @@ const FooterNav = styled.div`
     display: flex;
     justify-content: space-between;
     width: 400px;
-    i {
+    svg {
+      position: relative;
+      top: 5px;
       margin-right: 15px;
       &:last-child {
         margin-right: 0;
@@ -65,7 +68,6 @@ const FooterNav = styled.div`
     a {
       color: ${colors.lightGrey};
       cursor: pointer;
-      display: block;
       padding: 10px 5px;
       position: relative;
       text-decoration: none;
@@ -88,14 +90,15 @@ const FooterNav = styled.div`
       &.arrow {
         bottom: 0;
         padding: 10px 5px;
+        transform: rotate(-90deg);
         transition: 0.2s ease-out;
-        i {
+        svg {
           transition: 0.2s ease-out;
         }
         &:hover {
           bottom: 15px;
-          i {
-            color: ${colors.accent};
+          svg {
+            fill: ${colors.accent};
           }
         }
       }
@@ -142,7 +145,7 @@ export default function Footer() {
             rel="noreferrer"
             className="text-link"
           >
-            <i className="fab fa-lg fa-behance" />
+            <Behance />
             <span>Behance</span>
           </a>
           <a
@@ -151,11 +154,11 @@ export default function Footer() {
             rel="noreferrer"
             className="text-link"
           >
-            <i className="fab fa-lg fa-github" />
+            <Github />
             <span>GitHub</span>
           </a>
           <a className="arrow" onClick={scrollUp}>
-            <i className="fas fa-lg fa-arrow-up" />
+            <Arrow />
           </a>
         </div>
       </FooterNav>
