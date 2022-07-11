@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { Link } from 'gatsby';
 import { colors, font, breakpoints } from '../imports/variables';
+import { Behance, Github } from './icons';
 
 import logo from '../../static/images/zcd_logo2.svg';
 
@@ -69,8 +70,8 @@ const NavbarItems = styled.div`
       position: absolute;
       left: 50%;
       bottom: 50%;
-      width: 0%;
-      height: 0%;
+      width: 0px;
+      height: 0px;
       transform: translate(-50%, 50%);
       opacity: 1;
       background: ${colors.accent};
@@ -79,10 +80,12 @@ const NavbarItems = styled.div`
       z-index: -1;
     }
     &.icon-link:hover {
-      color: ${colors.darkGrey};
+      svg {
+        fill: ${colors.darkGrey};
+      }
       &:after {
-        height: 100%;
-        width: 100%;
+        height: 50px;
+        width: 50px;
       }
     }
   }
@@ -225,7 +228,7 @@ export default function Navbar() {
             className="icon-link"
             aria-label="behance"
           >
-            <i className="fab fa-lg fa-behance" />
+            <Behance />
           </a>
           <a
             href="https://github.com/Zachcos"
@@ -234,7 +237,7 @@ export default function Navbar() {
             className="icon-link"
             aria-label="github"
           >
-            <i className="fab fa-lg fa-github" />
+            <Github />
           </a>
         </NavbarItems>
       </NavbarContainer>
