@@ -82,8 +82,8 @@ const CopyWrapper = styled(motion.div)`
     }
   }
   &.statement {
-    font-weight: 400;
     font-size: 1.2rem;
+    font-weight: 400;
     line-height: 2.4rem;
   }
   @media screen and (max-width: ${breakpoints.tablet}) {
@@ -124,12 +124,12 @@ export default function About() {
         <CopyWrapper variants={aniVariants.child}>
           I began my interest in design when I was in my early teens. My cousin
           and I used to find Photoshop tutorials that we liked and would sit on
-          the phone for hours while we completed them. (We compared our
-          results by sending them through AOL Instant Messenger... ✌🏻👴🏻✌🏻) From
-          there, I dabbled in (terrible) Flash animations and eventually found
-          my footing tinkering with late-90's web builders like Yahoo!
-          GeoCities, where the restrictions of that platform made me want to
-          learn how to write my own code.
+          the phone for hours while we completed them. (We compared our results
+          by sending them through AOL Instant Messenger... ✌🏻👴🏻✌🏻) From there, I
+          dabbled in (terrible) Flash animations and eventually found my footing
+          tinkering with late-90's web builders like Yahoo! GeoCities, where the
+          restrictions of that platform made me want to learn how to write my
+          own code.
           <br />
           <br />
           My first sites were Photoshop designs cut into pieces and reassembled

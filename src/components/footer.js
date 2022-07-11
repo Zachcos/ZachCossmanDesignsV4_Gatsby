@@ -48,19 +48,19 @@ const FooterNav = styled.div`
   position: absolute;
   width: 100%;
   .attribution {
+    align-items: center;
+    display: flex;
     font-size: 0.9rem;
     margin-right: auto;
-    display: flex;
-    align-items: center;
   }
   .linkWrapper {
     display: flex;
     justify-content: space-between;
     width: 400px;
     svg {
+      margin-right: 15px;
       position: relative;
       top: 5px;
-      margin-right: 15px;
       &:last-child {
         margin-right: 0;
       }
