@@ -4,6 +4,7 @@ import { Link, graphql } from 'gatsby';
 import { motion } from 'framer-motion';
 import { colors, font, aniVariants, breakpoints } from '../imports/variables';
 import Footer from '../components/footer';
+import { Arrow } from '../components/icons';
 
 const DetailsContainer = styled(motion.div)`
   display: flex;
@@ -142,14 +143,13 @@ const NextProjectContainer = styled.div`
         padding-right: 50px;
         text-decoration: none;
         &:hover {
-          i {
-            color: ${colors.accent};
+          svg {
+            fill: ${colors.accent};
             right: 0;
           }
         }
       }
-      i {
-        color: ${colors.lightGrey};
+      svg {
         margin-left: 10px;
         position: absolute;
         right: 10px;
@@ -166,13 +166,8 @@ const NextProjectContainer = styled.div`
 `;
 
 export default function PortfolioDetail({ data }) {
-  const {
-    title,
-    description,
-    liveUrl,
-    nextProj,
-    assets,
-  } = data.featuredPortfolioJson;
+  const { title, description, liveUrl, nextProj, assets } =
+    data.featuredPortfolioJson;
   return (
     <>
       <DetailsContainer
@@ -210,7 +205,7 @@ export default function PortfolioDetail({ data }) {
           <div className="label">Next Project</div>
           <div className="project-name">
             <Link to={`..${nextProj.slug}`}>
-              {nextProj.title} <i className="fas fa-arrow-right" />
+              {nextProj.title} <Arrow />
             </Link>
           </div>
         </div>
@@ -221,7 +216,7 @@ export default function PortfolioDetail({ data }) {
 }
 
 export const query = graphql`
-  query($slug: String!) {
+  query ($slug: String!) {
     featuredPortfolioJson(slug: { eq: $slug }) {
       slug
       title
