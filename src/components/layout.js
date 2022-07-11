@@ -15,7 +15,7 @@ const ContentContainer = styled(motion.div)`
 `;
 
 export default function Layout({ children, location }) {
-  const duration = 0.5;
+  const duration = 0.45;
   const variants = {
     initial: {
       opacity: 0,

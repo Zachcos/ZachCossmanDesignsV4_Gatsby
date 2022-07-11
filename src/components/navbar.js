@@ -54,7 +54,7 @@ const NavbarItems = styled.div`
       left: 0;
       opacity: 0;
       position: absolute;
-      transition: 0.2s ease-out;
+      transition: 0.15s ease-out;
       width: 100%;
     }
     &.text-link:hover:after {
@@ -66,17 +66,17 @@ const NavbarItems = styled.div`
       z-index: 1;
     }
     &.icon-link:after {
-      content: '';
-      position: absolute;
-      left: 50%;
-      bottom: 50%;
-      width: 0px;
-      height: 0px;
-      transform: translate(-50%, 50%);
-      opacity: 1;
       background: ${colors.accent};
       border-radius: 50%;
+      bottom: 50%;
+      content: '';
+      height: 0px;
+      left: 50%;
+      opacity: 1;
+      position: absolute;
+      transform: translate(-50%, 50%);
       transition: all 0.2s ease-out;
+      width: 0px;
       z-index: -1;
     }
     &.icon-link:hover {
@@ -117,15 +117,15 @@ const NavbarItems = styled.div`
 `;
 
 const HamburgerMenu = styled.div`
-  width: 25px;
-  height: 32px;
+  align-items: center;
   display: none;
   flex-direction: column;
-  align-items: center;
+  height: 32px;
   justify-content: center;
   margin-right: 40px;
   padding: 20px;
   position: relative;
+  width: 25px;
   z-index: 100;
   &.open {
     span:first-child {
@@ -138,13 +138,13 @@ const HamburgerMenu = styled.div`
     }
   }
   span {
+    background: white;
     display: block;
-    width: 100%;
     height: 3px;
     margin-bottom: 7px;
-    background: white;
     position: relative;
     transition: 0.2s ease-out;
+    width: 100%;
   }
   @media screen and (max-width: ${breakpoints.phone}) {
     display: flex;

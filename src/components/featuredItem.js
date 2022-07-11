@@ -6,9 +6,9 @@ import { colors, font, breakpoints } from '../imports/variables';
 
 const ItemWrapper = styled(motion.div)`
   height: 550px;
+  margin: 0 0 100px 0;
   position: relative;
   width: 100%;
-  margin: 0 0 100px 0;
   .image-frame {
     height: 550px;
     margin-bottom: 50px;
@@ -16,12 +16,12 @@ const ItemWrapper = styled(motion.div)`
     position: relative;
     width: 100%;
     img {
-      top: 0;
-      position: relative;
-      transition: 0.3s ease-out;
-      width: 100%;
       height: 100%;
       object-fit: cover;
+      position: relative;
+      top: 0;
+      transition: 0.3s ease-out;
+      width: 100%;
       &:hover {
         transform: scale(1.05);
       }

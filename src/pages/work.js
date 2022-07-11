@@ -77,8 +77,8 @@ const OtherProjectWrapper = styled.div`
   }
   @media screen and (max-width: ${breakpoints.phone}) {
     height: 130px;
-    width: 130px;
     margin: 15px 0;
+    width: 130px;
   }
 `;
 

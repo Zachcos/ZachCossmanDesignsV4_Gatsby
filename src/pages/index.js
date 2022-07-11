@@ -54,7 +54,7 @@ const HeroDisplayCopy = styled(motion.p)`
       left: 0;
       opacity: 0.2;
       position: absolute;
-      transition: all 0.2s ease-out;
+      transition: all 0.15s ease-out;
       width: 100%;
     }
     &:hover:after {
