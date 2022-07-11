@@ -71,7 +71,7 @@ const FooterNav = styled.div`
       padding: 10px 5px;
       position: relative;
       text-decoration: none;
-      transition: 0.3s ease-out;
+      transition: all 0.15s ease-out;
       &.text-link:after {
         background: ${colors.accent};
         bottom: -10px;
@@ -80,7 +80,7 @@ const FooterNav = styled.div`
         left: 0;
         opacity: 0;
         position: absolute;
-        transition: 0.2s ease-out;
+        transition: 0.15s ease-out;
         width: 100%;
       }
       &.text-link:hover:after {
@@ -91,9 +91,9 @@ const FooterNav = styled.div`
         bottom: 0;
         padding: 10px 5px;
         transform: rotate(-90deg);
-        transition: 0.2s ease-out;
+        transition: all 0.15s ease-out;
         svg {
-          transition: 0.2s ease-out;
+          transition: all 0.15s ease-out;
         }
         &:hover {
           bottom: 15px;

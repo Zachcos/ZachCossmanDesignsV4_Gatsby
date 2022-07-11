@@ -153,7 +153,7 @@ const NextProjectContainer = styled.div`
         margin-left: 10px;
         position: absolute;
         right: 10px;
-        transition: all 0.2s ease-out;
+        transition: all 0.15s ease-out;
       }
     }
     @media screen and (max-width: ${breakpoints.tablet}) {

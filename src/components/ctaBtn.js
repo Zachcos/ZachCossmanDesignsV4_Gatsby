@@ -14,7 +14,7 @@ const Cta = styled.div`
   justify-content: center;
   overflow: hidden;
   position: relative;
-  transition: 0.3s;
+  transition: 0.15s;
   width: 230px;
   &:after {
     background: ${colors.accent};
@@ -23,7 +23,7 @@ const Cta = styled.div`
     height: 5px;
     left: 50%;
     position: absolute;
-    transition: 0.3s;
+    transition: 0.15s ease-out;
     width: 0;
   }
   &:hover {

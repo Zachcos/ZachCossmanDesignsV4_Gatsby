@@ -54,7 +54,7 @@ const NavbarItems = styled.div`
       left: 0;
       opacity: 0;
       position: absolute;
-      transition: 0.2s ease-out;
+      transition: 0.15s ease-out;
       width: 100%;
     }
     &.text-link:hover:after {
