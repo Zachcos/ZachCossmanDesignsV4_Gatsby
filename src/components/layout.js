@@ -46,10 +46,6 @@ export default function Layout({ children, location }) {
           content="Zach Cossman Designs - Custom performant websites"
         />
         <title>Zach Cossman Designs</title>
-        <script
-          src="https://kit.fontawesome.com/c3abb1e5c6.js"
-          crossOrigin="anonymous"
-        />
       </Helmet>
       <GlobalStyle />
       <Navbar />
