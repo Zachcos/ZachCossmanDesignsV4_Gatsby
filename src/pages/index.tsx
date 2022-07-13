@@ -75,9 +75,9 @@ export default function Home() {
   return (
     <HeroContainer
       variants={aniVariants.parent}
-      initial="initial"
-      animate="animate"
-      exit="exit"
+      initial='initial'
+      animate='animate'
+      exit='exit'
     >
       <HeroDisplayText variants={aniVariants.child}>
         Hi, I'm Zach — I design and develop websites
@@ -86,7 +86,7 @@ export default function Home() {
         For over 10 years I've been designing and developing sites and web
         experiences for companies and creative individuals. Check out my work,
         learn more{' '}
-        <Link to="/about" alt="">
+        <Link to='/about' aria-label='about'>
           about me
         </Link>
         , and get in touch...
