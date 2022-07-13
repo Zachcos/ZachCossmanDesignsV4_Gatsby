@@ -186,8 +186,8 @@ export default function Navbar() {
         transition={{ ease: 'easeOut', duration: 0.5 }}
       >
         <LogoContainer>
-          <Link to="/" aria-label="home">
-            <img src={logo} alt="" />
+          <Link to='/' aria-label='home'>
+            <img src={logo} alt='' />
           </Link>
         </LogoContainer>
         <HamburgerMenu
@@ -199,43 +199,43 @@ export default function Navbar() {
         </HamburgerMenu>
         <NavbarItems className={isOpen ? 'open' : ''}>
           <Link
-            to="/work"
-            alt=""
-            className="text-link"
+            to='/work'
+            aria-label='work'
+            className='text-link'
             onClick={() => setIsOpen(false)}
           >
             work
           </Link>
           <Link
-            to="/about"
-            alt=""
-            className="text-link"
+            to='/about'
+            aria-label='about'
+            className='text-link'
             onClick={() => setIsOpen(false)}
           >
             about
           </Link>
           <a
-            href="mailto: zachcos@gmail.com?subject=Hey Zach!"
-            alt=""
-            className="text-link"
+            href='mailto: zachcos@gmail.com?subject=Hey Zach!'
+            aria-label='email'
+            className='text-link'
           >
             email me
           </a>
           <a
-            href="https://behance.net/Zachcos"
-            target="_blank"
-            rel="noreferrer"
-            className="icon-link"
-            aria-label="behance"
+            href='https://behance.net/Zachcos'
+            target='_blank'
+            rel='noreferrer'
+            className='icon-link'
+            aria-label='behance'
           >
             <Behance />
           </a>
           <a
-            href="https://github.com/Zachcos"
-            target="_blank"
-            rel="noreferrer"
-            className="icon-link"
-            aria-label="github"
+            href='https://github.com/Zachcos'
+            target='_blank'
+            rel='noreferrer'
+            className='icon-link'
+            aria-label='github'
           >
             <Github />
           </a>

@@ -14,7 +14,7 @@ const ContentContainer = styled(motion.div)`
   }
 `;
 
-export default function Layout({ children, location }) {
+export default function Layout({ location, children }: LayoutProps) {
   const duration = 0.45;
   const variants = {
     initial: {
@@ -38,7 +38,7 @@ export default function Layout({ children, location }) {
     <>
       <Helmet>
         <html lang='en' />
-        <meta charset='UTF-8' />
+        <meta charSet='UTF-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <meta httpEquiv='X-UA-Compatible' content='ie=edge' />
         <meta

@@ -1,3 +1,5 @@
+declare module '*.svg';
+
 interface ParentAniProps {
   variants: {
     initial: {
@@ -49,4 +51,11 @@ interface FeaturedItemProps {
     title: string;
   };
   variants: ParentAniProps | ChildAniProps;
+}
+
+interface LayoutProps {
+  location: {
+    pathname: string;
+  };
+  children: JSX.Element;
 }
