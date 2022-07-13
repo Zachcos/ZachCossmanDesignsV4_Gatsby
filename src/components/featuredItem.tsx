@@ -45,14 +45,14 @@ const ItemWrapper = styled(motion.div)`
   }
 `;
 
-export default function FeaturedItem({ item, variants }) {
+export default function FeaturedItem({ item, variants }: FeaturedItemProps) {
   return (
-    <ItemWrapper variants={variants}>
+    <ItemWrapper {...variants}>
       <Link to={item.slug}>
-        <div className="image-frame">
-          <img src={item.portImg} alt="" />
+        <div className='image-frame'>
+          <img src={item.portImg} alt='' />
         </div>
-        <div className="title">{item.title}</div>
+        <div className='title'>{item.title}</div>
       </Link>
     </ItemWrapper>
   );
