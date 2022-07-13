@@ -1,4 +1,5 @@
 declare module '*.svg';
+declare module '*.jpg';
 
 interface ParentAniProps {
   variants: {
@@ -26,7 +27,7 @@ interface ParentAniProps {
 }
 
 interface ChildAniProps {
-  variants?: {
+  variants: {
     initial: {
       opacity: number;
       top: string;
@@ -38,8 +39,8 @@ interface ChildAniProps {
         duration: number;
         ease: string;
       };
-      exit: {};
     };
+    exit: {};
   };
 }
 
