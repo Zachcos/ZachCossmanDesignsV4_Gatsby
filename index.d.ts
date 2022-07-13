@@ -1,22 +1,24 @@
 interface ParentAniProps {
-  initial: {
-    top: string;
-  };
-  animate: {
-    top: number;
-    transition: {
-      duration: number;
-      delayChildren: number;
-      staggerChildren: number;
-      ease: string;
+  variants: {
+    initial: {
+      top: string;
     };
-  };
-  exit: {
-    top: string;
-    opacity: number;
-    transition: {
-      duration: number;
-      ease: string;
+    animate: {
+      top: number;
+      transition: {
+        duration: number;
+        delayChildren: number;
+        staggerChildren: number;
+        ease: string;
+      };
+    };
+    exit: {
+      top: string;
+      opacity: number;
+      transition: {
+        duration: number;
+        ease: string;
+      };
     };
   };
 }
@@ -37,4 +39,14 @@ interface ChildAniProps {
       exit: {};
     };
   };
+}
+
+interface FeaturedItemProps {
+  item: {
+    id: string;
+    portImg: string;
+    slug: string;
+    title: string;
+  };
+  variants: ParentAniProps | ChildAniProps;
 }
