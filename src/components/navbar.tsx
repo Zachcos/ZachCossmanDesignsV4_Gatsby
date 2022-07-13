@@ -107,7 +107,7 @@ const NavbarItems = styled.div`
     position: fixed;
     right: -100%;
     top: 0;
-    transition: 0.6s ease-out;
+    transition: 0.275s ease-out;
     width: 100%;
     z-index: 1;
     &.open {
