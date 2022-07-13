@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
 import styled from 'styled-components';
 import { colors, font, breakpoints } from '../imports/variables';
@@ -129,35 +127,35 @@ export default function Footer() {
   }
   return (
     <FooterWrapper>
-      <div className="cta">
-        <div className="title">Let's work together</div>
-        <div className="copy">
+      <div className='cta'>
+        <div className='title'>Let's work together</div>
+        <div className='copy'>
           What can I help you with? Feel free to drop a line...
         </div>
         <CtaBtn />
       </div>
       <FooterNav>
-        <div className="attribution">&copy; Zach Cossman 2020</div>
-        <div className="linkWrapper">
+        <div className='attribution'>&copy; Zach Cossman 2020</div>
+        <div className='linkWrapper'>
           <a
-            href="https://www.behance.net/Zachcos"
-            target="_blank"
-            rel="noreferrer"
-            className="text-link"
+            href='https://www.behance.net/Zachcos'
+            target='_blank'
+            rel='noreferrer'
+            className='text-link'
           >
             <Behance />
             <span>Behance</span>
           </a>
           <a
-            href="https://www.github.com/Zachcos"
-            target="_blank"
-            rel="noreferrer"
-            className="text-link"
+            href='https://www.github.com/Zachcos'
+            target='_blank'
+            rel='noreferrer'
+            className='text-link'
           >
             <Github />
             <span>GitHub</span>
           </a>
-          <a className="arrow" onClick={scrollUp}>
+          <a className='arrow' onClick={scrollUp}>
             <Arrow />
           </a>
         </div>
