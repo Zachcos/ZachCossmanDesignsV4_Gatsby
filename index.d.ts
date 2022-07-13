@@ -25,19 +25,21 @@ interface ParentAniProps {
 }
 
 interface ChildAniProps {
-  initial?: {
-    opacity: number;
-    top: string;
-  };
-  animate?: {
-    opacity: number;
-    top: number;
-    transition: {
-      duration: number;
-      ease: string;
+  variants?: {
+    initial?: {
+      opacity: number;
+      top: string;
     };
+    animate?: {
+      opacity: number;
+      top: number;
+      transition: {
+        duration: number;
+        ease: string;
+      };
+    };
+    exit?: {};
   };
-  exit?: {};
 }
 
 interface FeaturedItemProps {
@@ -47,7 +49,7 @@ interface FeaturedItemProps {
     slug: string;
     title: string;
   };
-  variants: ParentAniProps | ChildAniProps;
+  variants?: ParentAniProps | ChildAniProps;
 }
 
 interface LayoutProps {

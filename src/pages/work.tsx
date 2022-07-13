@@ -99,7 +99,7 @@ export default function Work({ data }: DataProps) {
             <FeaturedItem
               key={item.node.id}
               item={item.node}
-              variants={aniVariants.child}
+              {...aniVariants.child}
             />
           ))}
         </FeaturedWrapper>
