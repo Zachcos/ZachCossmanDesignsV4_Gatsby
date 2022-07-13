@@ -24,9 +24,9 @@ export const aniVariants = {
     animate: {
       top: 0,
       transition: {
-        duration: 0.45,
+        duration: 0.35,
         delayChildren: 0.3,
-        staggerChildren: 0.25,
+        staggerChildren: 0.15,
         ease: 'easeOut',
       },
     },
@@ -34,7 +34,7 @@ export const aniVariants = {
       top: '-75px',
       opacity: 0,
       transition: {
-        duration: 0.45,
+        duration: 0.35,
         ease: 'easeIn',
       },
     },
@@ -49,7 +49,7 @@ export const aniVariants = {
       opacity: 1,
       top: 0,
       transition: {
-        duration: 0.45,
+        duration: 0.35,
         ease: 'easeOut',
       },
     },
