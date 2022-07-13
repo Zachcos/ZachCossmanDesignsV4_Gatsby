@@ -82,20 +82,20 @@ const OtherProjectWrapper = styled.div`
   }
 `;
 
-export default function Work({ data }) {
+export default function Work({ data }: DataProps) {
   return (
     <>
       <WorkWrapper
         variants={aniVariants.parent}
-        initial="initial"
-        animate="animate"
-        exit="exit"
+        initial='initial'
+        animate='animate'
+        exit='exit'
       >
         <FeaturedWrapper variants={aniVariants.parent}>
           <WrapperHeading variants={aniVariants.child}>
             Featured Projects
           </WrapperHeading>
-          {data.featured.edges.map((item) => (
+          {data.featured.edges.map((item: FeaturedWorkItem) => (
             <FeaturedItem
               key={item.node.id}
               item={item.node}
@@ -105,10 +105,10 @@ export default function Work({ data }) {
         </FeaturedWrapper>
         <OtherWrapper>
           <WrapperHeading>Other Projects</WrapperHeading>
-          {data.other.edges.map((item) => (
+          {data.other.edges.map((item: OtherWorkItem) => (
             <OtherProjectWrapper key={item.node.id}>
-              <a href={item.node.behanceUrl} target="_blank" rel="noreferrer">
-                <img src={item.node.thumbImg} alt="" />
+              <a href={item.node.behanceUrl} target='_blank' rel='noreferrer'>
+                <img src={item.node.thumbImg} alt='' />
               </a>
             </OtherProjectWrapper>
           ))}
