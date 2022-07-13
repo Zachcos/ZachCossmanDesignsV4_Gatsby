@@ -165,45 +165,46 @@ const NextProjectContainer = styled.div`
   }
 `;
 
-export default function PortfolioDetail({ data }) {
+export default function PortfolioDetail({ data }: PortfolioItem) {
   const { title, description, liveUrl, nextProj, assets } =
     data.featuredPortfolioJson;
+  console.log('this is our data: ', data);
   return (
     <>
       <DetailsContainer
         variants={aniVariants.parent}
-        initial="initial"
-        animate="animate"
-        exit="exit"
+        initial='initial'
+        animate='animate'
+        exit='exit'
       >
-        <motion.div variants={aniVariants.parent} className="info">
-          <motion.h2 variants={aniVariants.child} className="title">
+        <motion.div variants={aniVariants.parent} className='info'>
+          <motion.h2 variants={aniVariants.child} className='title'>
             {title}
           </motion.h2>
-          <motion.div variants={aniVariants.child} className="field">
-            <span className="field-label">liveUrl</span>
-            <span className="field-info">
-              <a href={liveUrl} target="_blank" rel="noreferrer">
+          <motion.div variants={aniVariants.child} className='field'>
+            <span className='field-label'>liveUrl</span>
+            <span className='field-info'>
+              <a href={liveUrl} target='_blank' rel='noreferrer'>
                 {liveUrl}
               </a>
             </span>
           </motion.div>
         </motion.div>
-        <motion.div variants={aniVariants.parent} className="description">
-          {description.map((para) => (
+        <motion.div variants={aniVariants.parent} className='description'>
+          {description.map((para: string) => (
             <motion.p variants={aniVariants.child}>{para}</motion.p>
           ))}
         </motion.div>
       </DetailsContainer>
       <AssetContainer variants={aniVariants.child}>
-        {assets.map((asset) => (
-          <img src={asset} alt="" />
+        {assets.map((asset: string) => (
+          <img src={asset} alt='' />
         ))}
       </AssetContainer>
       <NextProjectContainer>
-        <div className="next-details">
-          <div className="label">Next Project</div>
-          <div className="project-name">
+        <div className='next-details'>
+          <div className='label'>Next Project</div>
+          <div className='project-name'>
             <Link to={`..${nextProj.slug}`}>
               {nextProj.title} <Arrow />
             </Link>
