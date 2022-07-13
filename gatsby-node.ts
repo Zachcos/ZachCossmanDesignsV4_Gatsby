@@ -17,7 +17,7 @@ exports.createPages = ({ graphql, actions }) => {
       result.data.allFeaturedPortfolioJson.edges.forEach(({ node }) => {
         createPage({
           path: `work/${node.slug}`,
-          component: path.resolve('./src/templates/portfolioDetail.js'),
+          component: path.resolve('./src/templates/portfolioDetail.tsx'),
           context: {
             slug: node.slug,
           },

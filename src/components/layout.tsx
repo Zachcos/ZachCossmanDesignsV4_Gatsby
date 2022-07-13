@@ -37,13 +37,13 @@ export default function Layout({ children, location }) {
   return (
     <>
       <Helmet>
-        <html lang="en" />
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+        <html lang='en' />
+        <meta charset='UTF-8' />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <meta httpEquiv='X-UA-Compatible' content='ie=edge' />
         <meta
-          name="description"
-          content="Zach Cossman Designs - Custom performant websites"
+          name='description'
+          content='Zach Cossman Designs - Custom performant websites'
         />
         <title>Zach Cossman Designs</title>
       </Helmet>
@@ -53,9 +53,9 @@ export default function Layout({ children, location }) {
         <ContentContainer
           key={location.pathname}
           variants={variants}
-          initial="initial"
-          animate="animate"
-          exit="exit"
+          initial='initial'
+          animate='animate'
+          exit='exit'
         >
           {children}
         </ContentContainer>
