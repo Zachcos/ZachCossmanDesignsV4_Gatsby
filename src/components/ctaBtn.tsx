@@ -33,15 +33,17 @@ const Cta = styled.div`
       width: 100%;
     }
   }
+  a {
+    position: relative;
+    text-decoration: none;
+  }
 `;
 
-export default function CtaBtn({ variants }) {
+export default function CtaBtn({ variants }: ChildAniProps) {
   return (
     <motion.a
       variants={variants}
       href='mailto: zachcos@gmail.com?subject=Hey Zach!'
-      style={{ position: 'relative', textDecoration: 'none' }}
-      name='email me'
     >
       <Cta>zachcos@gmail.com</Cta>
     </motion.a>
