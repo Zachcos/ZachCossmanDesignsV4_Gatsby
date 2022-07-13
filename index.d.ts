@@ -24,7 +24,7 @@ interface ParentAniProps {
 }
 
 interface ChildAniProps {
-  variants: {
+  variants?: {
     initial: {
       opacity: number;
       top: string;
