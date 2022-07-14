@@ -82,7 +82,7 @@ const OtherProjectWrapper = styled.div`
   }
 `;
 
-export default function Work({ data }: DataProps) {
+const Work = ({ data }: DataProps) => {
   return (
     <>
       <WorkWrapper
@@ -117,7 +117,7 @@ export default function Work({ data }: DataProps) {
       <Footer />
     </>
   );
-}
+};
 
 export const query = graphql`
   query {
@@ -143,3 +143,5 @@ export const query = graphql`
     }
   }
 `;
+
+export default Work;

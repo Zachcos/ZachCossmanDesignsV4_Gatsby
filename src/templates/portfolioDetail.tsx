@@ -165,7 +165,7 @@ const NextProjectContainer = styled.div`
   }
 `;
 
-export default function PortfolioDetail({ data }: PortfolioItem) {
+const PortfolioDetail = ({ data }: PortfolioItem) => {
   const { title, description, liveUrl, nextProj, assets } =
     data.featuredPortfolioJson;
   console.log('this is our data: ', data);
@@ -214,7 +214,7 @@ export default function PortfolioDetail({ data }: PortfolioItem) {
       <Footer />
     </>
   );
-}
+};
 
 export const query = graphql`
   query ($slug: String!) {
@@ -231,3 +231,5 @@ export const query = graphql`
     }
   }
 `;
+
+export default PortfolioDetail;

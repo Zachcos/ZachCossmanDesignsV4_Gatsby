@@ -71,7 +71,7 @@ const HeroDisplayCopy = styled(motion.p)`
   }
 `;
 
-export default function Home() {
+const Home = () => {
   return (
     <HeroContainer
       variants={aniVariants.parent}
@@ -94,4 +94,6 @@ export default function Home() {
       <CtaBtn variants={aniVariants.child} />
     </HeroContainer>
   );
-}
+};
+
+export default Home;

@@ -104,19 +104,19 @@ const CopyWrapper = styled(motion.div)`
   }
 `;
 
-export default function About() {
+const About = () => {
   return (
     <AboutWrapper
       variants={aniVariants.parent}
-      initial="initial"
-      animate="animate"
-      exit="exit"
+      initial='initial'
+      animate='animate'
+      exit='exit'
     >
       <SectionWrapper
         variants={aniVariants.parent}
-        initial="initial"
-        animate="animate"
-        exit="exit"
+        initial='initial'
+        animate='animate'
+        exit='exit'
       >
         <TitleWrapper variants={aniVariants.child}>
           Quick and clean designs for over a decade
@@ -154,28 +154,28 @@ export default function About() {
       </SectionWrapper>
       <SectionWrapper>
         <TitleWrapper>My Process</TitleWrapper>
-        <CopyWrapper className="process">
-          <div className="item mr">
-            <div className="subheading">Design</div>
+        <CopyWrapper className='process'>
+          <div className='item mr'>
+            <div className='subheading'>Design</div>
             From the initial consultation, I work with my clients to fine-tune
             the experience to it's cleanest, simplest form.
           </div>
-          <div className="item">
-            <div className="subheading">Branding</div>I strive to create
+          <div className='item'>
+            <div className='subheading'>Branding</div>I strive to create
             experiences with colors and typography that represent the
             personality and values of my clients.
           </div>
-          <div className="item mr">
-            <div className="subheading">Web</div>I build-out the experience from
+          <div className='item mr'>
+            <div className='subheading'>Web</div>I build-out the experience from
             the design to look great on a variety of full-sized screens.
           </div>
-          <div className="item">
-            <div className="subheading">Mobile</div>
+          <div className='item'>
+            <div className='subheading'>Mobile</div>
             In today's multi-device world, experiences are distilled down to
             ensure content is delivered quickly and clearly.
           </div>
-          <div className="item grow">
-            <div className="subheading">Continuing Support</div>
+          <div className='item grow'>
+            <div className='subheading'>Continuing Support</div>
             Whether it's making design tweaks or implementing new features, I
             continue to stay in contact with my clients to make sure their site
             is an experience that represents them and their values.
@@ -184,7 +184,7 @@ export default function About() {
       </SectionWrapper>
       <SectionWrapper>
         <TitleWrapper />
-        <CopyWrapper className="statement">
+        <CopyWrapper className='statement'>
           My goal is to create designs that are unique, but simple and
           straightforward. I use minimalism with an emphasis on typography and
           functional design to bring the best possible experience to the end
@@ -192,9 +192,11 @@ export default function About() {
         </CopyWrapper>
       </SectionWrapper>
       <SectionWrapper>
-        <img src={aboutImg} alt="" />
+        <img src={aboutImg} alt='' />
       </SectionWrapper>
       <Footer />
     </AboutWrapper>
   );
-}
+};
+
+export default About;
