@@ -14,7 +14,7 @@ const ContentContainer = styled(motion.div)`
   }
 `;
 
-export default function Layout({ location, children }: LayoutProps) {
+const Layout = ({ location, children }: LayoutProps) => {
   const duration = 0.45;
   const variants = {
     initial: {
@@ -62,4 +62,6 @@ export default function Layout({ location, children }: LayoutProps) {
       </AnimatePresence>
     </>
   );
-}
+};
+
+export default Layout;

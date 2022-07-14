@@ -151,7 +151,7 @@ const HamburgerMenu = styled.div`
   }
 `;
 
-export default function Navbar() {
+const Navbar = () => {
   const [shouldShow, setShouldShow] = useState(true);
   const [lastYPos, setLastYPos] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
@@ -243,4 +243,6 @@ export default function Navbar() {
       </NavbarContainer>
     </>
   );
-}
+};
+
+export default Navbar;

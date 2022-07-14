@@ -35,7 +35,7 @@ const Cta = styled(motion.div)`
   }
 `;
 
-export default function CtaBtn({ ...variants }: ChildAniProps) {
+const CtaBtn = ({ ...variants }: ChildAniProps) => {
   return (
     <Cta {...variants}>
       <a href='mailto: zachcos@gmail.com?subject=Hey Zach!'>
@@ -43,4 +43,6 @@ export default function CtaBtn({ ...variants }: ChildAniProps) {
       </a>
     </Cta>
   );
-}
+};
+
+export default CtaBtn;

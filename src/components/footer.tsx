@@ -117,7 +117,7 @@ const FooterNav = styled.div`
   }
 `;
 
-export default function Footer() {
+const Footer = () => {
   function scrollUp() {
     window.scroll({
       top: 0,
@@ -162,4 +162,6 @@ export default function Footer() {
       </FooterNav>
     </FooterWrapper>
   );
-}
+};
+
+export default Footer;

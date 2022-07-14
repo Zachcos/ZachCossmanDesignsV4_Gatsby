@@ -45,7 +45,7 @@ const ItemWrapper = styled(motion.div)`
   }
 `;
 
-export default function FeaturedItem({ item, variants }: FeaturedItemProps) {
+const FeaturedItem = ({ item, variants }: FeaturedItemProps) => {
   return (
     <ItemWrapper {...variants}>
       <Link to={item.slug}>
@@ -56,4 +56,6 @@ export default function FeaturedItem({ item, variants }: FeaturedItemProps) {
       </Link>
     </ItemWrapper>
   );
-}
+};
+
+export default FeaturedItem;
