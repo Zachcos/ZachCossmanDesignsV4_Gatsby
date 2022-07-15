@@ -45,7 +45,17 @@ const ItemWrapper = styled(motion.div)`
   }
 `;
 
-const FeaturedItem = ({ item, variants }: FeaturedItemProps) => {
+interface Props {
+  item: {
+    id: string;
+    portImg: string;
+    slug: string;
+    title: string;
+  };
+  variants?: ParentAniProps | ChildAniProps;
+}
+
+const FeaturedItem = ({ item, variants }: Props) => {
   return (
     <ItemWrapper {...variants}>
       <Link to={item.slug}>

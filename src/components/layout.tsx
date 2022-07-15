@@ -14,7 +14,14 @@ const ContentContainer = styled(motion.div)`
   }
 `;
 
-const Layout = ({ location, children }: LayoutProps) => {
+interface Props {
+  location: {
+    pathname: string;
+  };
+  children: JSX.Element;
+}
+
+const Layout = ({ location, children }: Props) => {
   const duration = 0.45;
   const variants = {
     initial: {

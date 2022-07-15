@@ -82,7 +82,50 @@ const OtherProjectWrapper = styled.div`
   }
 `;
 
-const Work = ({ data }: DataProps) => {
+interface Props {
+  data: {
+    featured: {
+      edges: {
+        node: {
+          id: string;
+          title: string;
+          slug: string;
+          portImg: string;
+        };
+        map: Function;
+      };
+    };
+    other: {
+      edges: {
+        node: {
+          id: string;
+          thumbImg: string;
+          behanceUrl: string;
+        };
+        map: Function;
+      };
+    };
+  };
+}
+
+interface FeaturedProps {
+  node: {
+    id: string;
+    title: string;
+    slug: string;
+    portImg: string;
+  };
+}
+
+interface OtherProps {
+  node: {
+    id: string;
+    thumbImg: string;
+    behanceUrl: string;
+  };
+}
+
+const Work = ({ data }: Props) => {
   return (
     <>
       <WorkWrapper
@@ -95,7 +138,7 @@ const Work = ({ data }: DataProps) => {
           <WrapperHeading variants={aniVariants.child}>
             Featured Projects
           </WrapperHeading>
-          {data.featured.edges.map((item: FeaturedWorkItem) => (
+          {data.featured.edges.map((item: FeaturedProps) => (
             <FeaturedItem
               key={item.node.id}
               item={item.node}
@@ -105,7 +148,7 @@ const Work = ({ data }: DataProps) => {
         </FeaturedWrapper>
         <OtherWrapper>
           <WrapperHeading>Other Projects</WrapperHeading>
-          {data.other.edges.map((item: OtherWorkItem) => (
+          {data.other.edges.map((item: OtherProps) => (
             <OtherProjectWrapper key={item.node.id}>
               <a href={item.node.behanceUrl} target='_blank' rel='noreferrer'>
                 <img src={item.node.thumbImg} alt='' />

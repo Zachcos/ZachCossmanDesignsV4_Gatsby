@@ -165,7 +165,23 @@ const NextProjectContainer = styled.div`
   }
 `;
 
-const PortfolioDetail = ({ data }: PortfolioItem) => {
+interface Props {
+  data: {
+    featuredPortfolioJson: {
+      slug: string;
+      title: string;
+      description: string[];
+      liveUrl: string;
+      nextProj: {
+        title: string;
+        slug: string;
+      };
+      assets: string[];
+    };
+  };
+}
+
+const PortfolioDetail = ({ data }: Props) => {
   const { title, description, liveUrl, nextProj, assets } =
     data.featuredPortfolioJson;
   console.log('this is our data: ', data);
