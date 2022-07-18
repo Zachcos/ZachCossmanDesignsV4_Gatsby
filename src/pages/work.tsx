@@ -86,22 +86,13 @@ interface Props {
   data: {
     featured: {
       edges: {
-        node: {
-          id: string;
-          title: string;
-          slug: string;
-          portImg: string;
-        };
+        node: FeaturedItemProps;
         map: Function;
       };
     };
     other: {
       edges: {
-        node: {
-          id: string;
-          thumbImg: string;
-          behanceUrl: string;
-        };
+        node: OtherItemProps;
         map: Function;
       };
     };
@@ -109,20 +100,11 @@ interface Props {
 }
 
 interface FeaturedProps {
-  node: {
-    id: string;
-    title: string;
-    slug: string;
-    portImg: string;
-  };
+  node: FeaturedItemProps;
 }
 
 interface OtherProps {
-  node: {
-    id: string;
-    thumbImg: string;
-    behanceUrl: string;
-  };
+  node: OtherItemProps;
 }
 
 const Work = ({ data }: Props) => {

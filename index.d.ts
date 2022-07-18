@@ -1,6 +1,19 @@
 declare module '*.svg';
 declare module '*.jpg';
 
+interface FeaturedItemProps {
+  id: string;
+  portImg: string;
+  slug: string;
+  title: string;
+}
+
+interface OtherItemProps {
+  id: string;
+  thumbImg: string;
+  behanceUrl: string;
+}
+
 interface ParentAniProps {
   initial: {
     top: string;

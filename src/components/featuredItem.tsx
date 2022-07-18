@@ -46,12 +46,7 @@ const ItemWrapper = styled(motion.div)`
 `;
 
 interface Props {
-  item: {
-    id: string;
-    portImg: string;
-    slug: string;
-    title: string;
-  };
+  item: FeaturedItemProps;
   variants?: ParentAniProps | ChildAniProps;
 }
 
