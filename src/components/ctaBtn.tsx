@@ -16,6 +16,9 @@ const Cta = styled(motion.div)`
   position: relative;
   transition: 0.15s ease-out;
   width: 230px;
+  a {
+    text-decoration: none;
+  }
   &:after {
     background: ${colors.accent};
     bottom: 0;
