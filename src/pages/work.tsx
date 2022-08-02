@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
 import { motion } from 'framer-motion';
-import { colors, font, aniVariants, breakpoints } from '../imports/variables';
+import { colors, font, breakpoints } from '../imports/variables';
+import { stagger, fadeUpIn, fadeUpInWithChildren } from '../imports/animations';
 import FeaturedItem from '../components/featuredItem';
 import Footer from '../components/footer';
 
@@ -109,23 +110,19 @@ interface OtherProps {
 
 const Work = ({ data }: Props) => {
   return (
-    <>
-      <WorkWrapper
-        variants={aniVariants.parent}
-        initial='initial'
-        animate='animate'
-        exit='exit'
-      >
-        <FeaturedWrapper variants={aniVariants.parent}>
-          <WrapperHeading variants={aniVariants.child}>
+    <motion.div
+      initial='initial'
+      animate='animate'
+      exit='exit'
+      variants={stagger}
+    >
+      <WorkWrapper variants={fadeUpIn}>
+        <FeaturedWrapper variants={fadeUpInWithChildren}>
+          <WrapperHeading variants={fadeUpInWithChildren}>
             Featured Projects
           </WrapperHeading>
           {data.featured.edges.map((item: FeaturedProps) => (
-            <FeaturedItem
-              key={item.node.id}
-              item={item.node}
-              {...aniVariants.child}
-            />
+            <FeaturedItem key={item.node.id} item={item.node} />
           ))}
         </FeaturedWrapper>
         <OtherWrapper>
@@ -140,7 +137,7 @@ const Work = ({ data }: Props) => {
         </OtherWrapper>
       </WorkWrapper>
       <Footer />
-    </>
+    </motion.div>
   );
 };
 

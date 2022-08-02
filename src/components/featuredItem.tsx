@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { motion } from 'framer-motion';
 import { colors, font, breakpoints } from '../imports/variables';
+import { fadeUpIn } from '../imports/animations';
 
 const ItemWrapper = styled(motion.div)`
   height: 550px;
@@ -47,12 +48,11 @@ const ItemWrapper = styled(motion.div)`
 
 interface Props {
   item: FeaturedItemProps;
-  variants?: ParentAniProps | ChildAniProps;
 }
 
-const FeaturedItem = ({ item, variants }: Props) => {
+const FeaturedItem = ({ item }: Props) => {
   return (
-    <ItemWrapper {...variants}>
+    <ItemWrapper variants={fadeUpIn}>
       <Link to={item.slug}>
         <div className='image-frame'>
           <img src={item.portImg} alt='' />
