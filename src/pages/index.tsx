@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { motion } from 'framer-motion';
-import { colors, font, aniVariants, breakpoints } from '../imports/variables';
+import { colors, font, breakpoints } from '../imports/variables';
+import { stagger, fadeUpIn } from '../imports/animations';
 import CtaBtn from '../components/ctaBtn';
 
 const HeroContainer = styled(motion.div)`
@@ -73,25 +74,24 @@ const HeroDisplayCopy = styled(motion.p)`
 
 const Home = () => {
   return (
-    <HeroContainer
-      variants={aniVariants.parent}
-      initial='initial'
-      animate='animate'
-      exit='exit'
-    >
-      <HeroDisplayText variants={aniVariants.child}>
-        Hi, I'm Zach — I design and develop websites
-      </HeroDisplayText>
-      <HeroDisplayCopy variants={aniVariants.child}>
-        For over 10 years I've been designing and developing sites and web
-        experiences for companies and creative individuals. Check out my work,
-        learn more{' '}
-        <Link to='/about' aria-label='about'>
-          about me
-        </Link>
-        , and get in touch...
-      </HeroDisplayCopy>
-      <CtaBtn variants={aniVariants.child} />
+    <HeroContainer initial='initial' animate='animate' exit='exit'>
+      <motion.div variants={stagger}>
+        <HeroDisplayText variants={fadeUpIn}>
+          Hi, I'm Zach — I design and develop websites
+        </HeroDisplayText>
+        <HeroDisplayCopy variants={fadeUpIn}>
+          For over 10 years I've been designing and developing sites and web
+          experiences for companies and creative individuals. Check out my work,
+          learn more{' '}
+          <Link to='/about' aria-label='about'>
+            about me
+          </Link>
+          , and get in touch...
+        </HeroDisplayCopy>
+        <motion.div variants={fadeUpIn}>
+          <CtaBtn />
+        </motion.div>
+      </motion.div>
     </HeroContainer>
   );
 };
