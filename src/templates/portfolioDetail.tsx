@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link, graphql } from 'gatsby';
 import { motion } from 'framer-motion';
-import { colors, font, aniVariants, breakpoints } from '../imports/variables';
+import { colors, font, breakpoints } from '../imports/variables';
+import { stagger, fadeUpIn, fadeUpInWithChildren } from '../imports/animations';
 import Footer from '../components/footer';
 import { Arrow } from '../components/icons';
 
@@ -114,7 +115,7 @@ const AssetContainer = styled(motion.div)`
   }
 `;
 
-const NextProjectContainer = styled.div`
+const NextProjectContainer = styled(motion.div)`
   align-items: center;
   border-bottom: 1px solid ${colors.lightGrey};
   display: flex;
@@ -184,40 +185,46 @@ interface Props {
 const PortfolioDetail = ({ data }: Props) => {
   const { title, description, liveUrl, nextProj, assets } =
     data.featuredPortfolioJson;
-  console.log('this is our data: ', data);
   return (
-    <>
+    <motion.div
+      initial='initial'
+      animate='animate'
+      exit='exit'
+      variants={stagger}
+    >
       <DetailsContainer
-        variants={aniVariants.parent}
+        variants={stagger}
         initial='initial'
         animate='animate'
         exit='exit'
       >
-        <motion.div variants={aniVariants.parent} className='info'>
-          <motion.h2 variants={aniVariants.child} className='title'>
+        <motion.div variants={fadeUpInWithChildren} className='info'>
+          <motion.h2 variants={fadeUpIn} className='title'>
             {title}
           </motion.h2>
-          <motion.div variants={aniVariants.child} className='field'>
-            <span className='field-label'>liveUrl</span>
-            <span className='field-info'>
+          <motion.div variants={fadeUpInWithChildren} className='field'>
+            <motion.span className='field-label' variants={fadeUpIn}>
+              liveUrl
+            </motion.span>
+            <motion.span className='field-info' variants={fadeUpIn}>
               <a href={liveUrl} target='_blank' rel='noreferrer'>
                 {liveUrl}
               </a>
-            </span>
+            </motion.span>
           </motion.div>
         </motion.div>
-        <motion.div variants={aniVariants.parent} className='description'>
+        <motion.div variants={fadeUpInWithChildren} className='description'>
           {description.map((para: string) => (
-            <motion.p variants={aniVariants.child}>{para}</motion.p>
+            <motion.p variants={fadeUpIn}>{para}</motion.p>
           ))}
         </motion.div>
       </DetailsContainer>
-      <AssetContainer variants={aniVariants.child}>
+      <AssetContainer variants={fadeUpIn}>
         {assets.map((asset: string) => (
           <img src={asset} alt='' />
         ))}
       </AssetContainer>
-      <NextProjectContainer>
+      <NextProjectContainer variants={fadeUpIn}>
         <div className='next-details'>
           <div className='label'>Next Project</div>
           <div className='project-name'>
@@ -228,7 +235,7 @@ const PortfolioDetail = ({ data }: Props) => {
         </div>
       </NextProjectContainer>
       <Footer />
-    </>
+    </motion.div>
   );
 };
 
