@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { colors, font, breakpoints } from '../imports/variables';
+import { motion } from 'framer-motion';
+import { fadeUpIn } from '../imports/animations';
 import CtaBtn from './ctaBtn';
 import { Behance, Github, Arrow } from './icons';
 
-const FooterWrapper = styled.div`
+const FooterWrapper = styled(motion.div)`
   height: 450px;
   position: relative;
   width: 100%;
@@ -126,7 +128,7 @@ const Footer = () => {
     });
   }
   return (
-    <FooterWrapper>
+    <FooterWrapper variants={fadeUpIn}>
       <div className='cta'>
         <div className='title'>Let's work together</div>
         <div className='copy'>
