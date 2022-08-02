@@ -52,12 +52,21 @@ const GlobalStyle = createGlobalStyle`
       font-size: 16px;
     }
   }
+
   body {
     background-color: ${colors.darkGrey};
     color: ${colors.lightGrey};
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
   }
+  
+  .full-wrap  {
+    margin: 0 60px;
+    @media screen and (max-width: ${breakpoints.phone}) {
+      margin: 0 35px;
+    }
+  }
+  
 
   @font-face {
     font-family: 'Open Sans';
