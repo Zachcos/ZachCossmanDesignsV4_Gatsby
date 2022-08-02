@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { colors, font, aniVariants, breakpoints } from '../imports/variables';
+import { colors, font, breakpoints } from '../imports/variables';
+import { fadeUpIn, fadeUpInWithChildren, stagger } from '../imports/animations';
 import Footer from '../components/footer';
 import aboutImg from '../../static/images/ZachC181.jpg';
 
@@ -58,6 +59,10 @@ const CopyWrapper = styled(motion.div)`
   line-height: 2rem;
   position: relative;
   width: 65%;
+  span {
+    display: block;
+    margin-bottom: 40px;
+  }
   &.process {
     display: flex;
     flex-wrap: wrap;
@@ -107,49 +112,46 @@ const CopyWrapper = styled(motion.div)`
 const About = () => {
   return (
     <AboutWrapper
-      variants={aniVariants.parent}
       initial='initial'
       animate='animate'
       exit='exit'
+      variants={fadeUpIn}
     >
-      <SectionWrapper
-        variants={aniVariants.parent}
-        initial='initial'
-        animate='animate'
-        exit='exit'
-      >
-        <TitleWrapper variants={aniVariants.child}>
+      <SectionWrapper variants={stagger}>
+        <TitleWrapper variants={fadeUpIn}>
           Quick and clean designs for over a decade
         </TitleWrapper>
-        <CopyWrapper variants={aniVariants.child}>
-          I began my interest in design when I was in my early teens. My cousin
-          and I used to find Photoshop tutorials that we liked and would sit on
-          the phone for hours while we completed them. (We compared our results
-          by sending them through AOL Instant Messenger... ✌🏻👴🏻✌🏻) From there, I
-          dabbled in (terrible) Flash animations and eventually found my footing
-          tinkering with late-90's web builders like Yahoo! GeoCities, where the
-          restrictions of that platform made me want to learn how to write my
-          own code.
-          <br />
-          <br />
-          My first sites were Photoshop designs cut into pieces and reassembled
-          for the web with code from Adobe Dreamweaver. Just as I was publishing
-          my first site, I got my first dose of just how quickly things change
-          in the world of web design and development and began the never-ending
-          journey of learning the new tools of the trade. Through table layouts,
-          floats, and the rest, I have stayed on a constant hunt for the
-          technologies that make sites faster and more versatile, with a
-          majority of my current work being built on React with GatsbyJS for
-          static-site generation.
-          <br />
-          <br />
-          Since the mid 2000's I have been working on a freelance basis with a
-          variety of clients, helping them establish brand identities and better
-          reach their audiences.
-          <br />
-          <br />
-          When I'm not behind the computer, you can find me acting on stage or
-          playing music, or looking for the nearest Starbucks. ☕️
+        <CopyWrapper variants={fadeUpInWithChildren}>
+          <motion.span variants={fadeUpIn}>
+            I began my interest in design when I was in my early teens. My
+            cousin and I used to find Photoshop tutorials that we liked and
+            would sit on the phone for hours while we completed them. (We
+            compared our results by sending them through AOL Instant
+            Messenger... ✌🏻👴🏻✌🏻) From there, I dabbled in (terrible) Flash
+            animations and eventually found my footing tinkering with late-90's
+            web builders like Yahoo! GeoCities, where the restrictions of that
+            platform made me want to learn how to write my own code.
+          </motion.span>
+          <motion.span variants={fadeUpIn}>
+            My first sites were Photoshop designs cut into pieces and
+            reassembled for the web with code from Adobe Dreamweaver. Just as I
+            was publishing my first site, I got my first dose of just how
+            quickly things change in the world of web design and development and
+            began the never-ending journey of learning the new tools of the
+            trade. Through table layouts, floats, and the rest, I have stayed on
+            a constant hunt for the technologies that make sites faster and more
+            versatile, with a majority of my current work being built on React
+            with GatsbyJS for static-site generation.
+          </motion.span>
+          <motion.span variants={fadeUpIn}>
+            Since the mid 2000's I have been working on a freelance basis with a
+            variety of clients, helping them establish brand identities and
+            better reach their audiences.
+          </motion.span>
+          <motion.span variants={fadeUpIn}>
+            When I'm not behind the computer, you can find me acting on stage or
+            playing music, or looking for the nearest Starbucks. ☕️
+          </motion.span>
         </CopyWrapper>
       </SectionWrapper>
       <SectionWrapper>
