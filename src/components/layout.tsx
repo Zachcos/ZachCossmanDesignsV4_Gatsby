@@ -28,9 +28,11 @@ const Layout = ({ location, children }: Props) => {
       </Helmet>
       <GlobalStyle />
       <Navbar />
-      <div className='full-wrap' key={location.pathname}>
-        <AnimatePresence exitBeforeEnter>{children}</AnimatePresence>
-      </div>
+      <AnimatePresence exitBeforeEnter>
+        <div className='full-wrap' key={location.pathname}>
+          {children}
+        </div>
+      </AnimatePresence>
     </>
   );
 };
